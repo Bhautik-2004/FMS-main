@@ -1,0 +1,1001 @@
+expense_id,date,amount,category,payment_method
+1,18-09-22,1442.71,Groceries,Debit Card
+2,30-01-22,5265.87,Charity,Credit Card
+3,02-04-23,913.81,Clothing,Debit Card
+4,16-10-22,5396,Living Expenses,Credit Card
+5,24-07-22,3086.98,Utilities,Debit Card
+6,16-09-23,6917.71,Utilities,Mobile Payment
+7,28-07-23,2551.31,Groceries,Debit Card
+8,15-09-23,5114.03,Clothing,Credit Card
+9,20-03-23,2864.37,Medical,Cash
+10,07-03-22,7754.1,Medical,Cash
+11,22-04-23,5477.59,Transportation,Debit Card
+12,22-02-22,7956.45,Dine Out,Mobile Payment
+13,20-09-22,247.79,Transportation,Debit Card
+14,13-07-22,6845.79,Clothing,Mobile Payment
+15,29-01-22,5896.81,Utilities,Cash
+16,05-10-23,4945.45,Living Expenses,Debit Card
+17,01-01-23,9774.45,Clothing,Credit Card
+18,22-02-23,7660.82,Living Expenses,Credit Card
+19,02-09-22,6849.39,Living Expenses,Debit Card
+20,06-05-23,3969.67,Groceries,Cash
+21,25-07-23,8109.89,Groceries,Credit Card
+22,14-05-22,3019.27,Transportation,Debit Card
+23,08-04-23,7380.93,Entertainment,Credit Card
+24,25-02-23,4551.21,Medical,Mobile Payment
+25,03-01-22,5721.25,Groceries,Credit Card
+26,11-09-22,3798.53,Medical,Mobile Payment
+27,08-10-23,672.08,Transportation,Credit Card
+28,06-07-22,2439.51,Utilities,Cash
+29,09-02-23,3628.08,Entertainment,Credit Card
+30,20-10-22,4809.54,Transportation,Cash
+31,26-12-23,408.65,Dine Out,Credit Card
+32,17-03-22,8292.22,Clothing,Cash
+33,25-10-23,9666.82,Medical,Credit Card
+34,02-09-23,7597.88,Medical,Credit Card
+35,06-09-22,6662.05,Charity,Mobile Payment
+36,21-05-22,1271.85,Dine Out,Mobile Payment
+37,11-04-23,8971.03,Utilities,Debit Card
+38,29-09-22,4492.81,Living Expenses,Mobile Payment
+39,23-09-23,1072.18,Dine Out,Mobile Payment
+40,02-03-22,9204.48,Dine Out,Mobile Payment
+41,02-03-23,4416.55,Living Expenses,Mobile Payment
+42,24-09-22,9329.12,Living Expenses,Cash
+43,07-06-22,2729.8,Clothing,Cash
+44,05-06-23,2555.44,Entertainment,Cash
+45,09-03-22,2767.67,Entertainment,Credit Card
+46,28-01-22,3813.53,Transportation,Mobile Payment
+47,18-06-23,8798.11,Utilities,Debit Card
+48,31-03-22,1816.59,Transportation,Mobile Payment
+49,07-07-23,8222.83,Transportation,Debit Card
+50,20-01-22,4153.96,Clothing,Credit Card
+51,07-06-23,9333.54,Charity,Mobile Payment
+52,05-11-22,2208.72,Clothing,Cash
+53,09-02-22,9062.01,Medical,Debit Card
+54,03-03-22,5814.95,Dine Out,Mobile Payment
+55,29-11-22,9597.79,Clothing,Debit Card
+56,13-03-22,9133.79,Living Expenses,Credit Card
+57,01-04-22,918.52,Charity,Mobile Payment
+58,23-08-22,3044.81,Utilities,Debit Card
+59,19-12-22,8725.57,Clothing,Credit Card
+60,16-07-22,5172.23,Transportation,Credit Card
+61,20-11-23,3812.42,Transportation,Cash
+62,16-11-22,5511.82,Groceries,Cash
+63,15-04-22,4531.52,Transportation,Debit Card
+64,13-06-22,7121.52,Clothing,Mobile Payment
+65,13-04-22,3554.89,Transportation,Debit Card
+66,07-10-23,5827.64,Dine Out,Mobile Payment
+67,25-10-22,7181.4,Medical,Debit Card
+68,29-09-23,7143.33,Medical,Cash
+69,11-12-23,9532.53,Clothing,Debit Card
+70,12-01-23,2378.34,Dine Out,Credit Card
+71,04-08-22,9327.56,Living Expenses,Credit Card
+72,15-08-23,1595.82,Transportation,Mobile Payment
+73,24-01-23,7810.06,Clothing,Debit Card
+74,22-05-22,9241.55,Clothing,Debit Card
+75,30-05-22,5799.47,Groceries,Credit Card
+76,23-01-22,6744.54,Medical,Debit Card
+77,12-08-23,7944.48,Utilities,Debit Card
+78,26-09-22,6501.35,Dine Out,Debit Card
+79,21-01-23,1746.05,Groceries,Mobile Payment
+80,06-07-22,2089.44,Clothing,Mobile Payment
+81,20-07-23,9101.49,Dine Out,Credit Card
+82,03-06-23,1857.3,Utilities,Credit Card
+83,11-04-23,3777.69,Entertainment,Debit Card
+84,14-06-23,855.74,Entertainment,Cash
+85,02-10-22,3077.41,Charity,Cash
+86,26-11-23,3645.59,Charity,Debit Card
+87,21-09-22,291.23,Charity,Mobile Payment
+88,09-07-22,584.86,Medical,Credit Card
+89,19-06-23,8268.29,Utilities,Cash
+90,06-01-23,6905.85,Entertainment,Credit Card
+91,07-07-23,842.58,Utilities,Credit Card
+92,05-11-23,6921.91,Utilities,Cash
+93,18-12-22,2596.85,Groceries,Debit Card
+94,04-07-22,9526.39,Utilities,Debit Card
+95,01-08-22,9343.25,Groceries,Mobile Payment
+96,05-11-23,3872.13,Dine Out,Cash
+97,04-06-22,9920.82,Utilities,Cash
+98,21-12-22,3358.61,Living Expenses,Debit Card
+99,20-02-23,8794.19,Charity,Credit Card
+100,22-05-22,3258,Clothing,Credit Card
+101,19-12-23,8575.82,Living Expenses,Debit Card
+102,20-03-22,7984.8,Dine Out,Debit Card
+103,18-09-22,4448.33,Groceries,Mobile Payment
+104,23-02-22,5098.7,Clothing,Credit Card
+105,14-01-22,6090.12,Entertainment,Debit Card
+106,26-07-23,504.19,Groceries,Mobile Payment
+107,13-09-22,8571.61,Groceries,Credit Card
+108,08-10-23,1292.18,Clothing,Debit Card
+109,29-10-22,4434.31,Clothing,Credit Card
+110,05-01-23,9718.24,Transportation,Debit Card
+111,28-03-22,4135.56,Charity,Cash
+112,19-11-22,5146.34,Living Expenses,Cash
+113,05-06-23,5109.71,Clothing,Mobile Payment
+114,11-10-23,5067.62,Medical,Mobile Payment
+115,10-02-23,7387.79,Clothing,Debit Card
+116,02-07-23,3937.65,Groceries,Debit Card
+117,05-07-23,1776.01,Charity,Mobile Payment
+118,20-12-23,4070.77,Charity,Debit Card
+119,04-04-22,8783.45,Charity,Mobile Payment
+120,27-04-23,5355.73,Groceries,Cash
+121,06-06-23,1320.32,Medical,Mobile Payment
+122,23-03-22,897.83,Living Expenses,Debit Card
+123,05-07-23,1096.72,Charity,Debit Card
+124,17-05-23,5345.11,Entertainment,Mobile Payment
+125,16-07-22,6102.88,Living Expenses,Mobile Payment
+126,22-08-23,4893.53,Entertainment,Credit Card
+127,15-04-23,3798.75,Medical,Credit Card
+128,18-08-22,463.21,Groceries,Credit Card
+129,26-05-22,5168.68,Transportation,Cash
+130,20-11-23,8008.66,Transportation,Mobile Payment
+131,13-12-23,3188.53,Living Expenses,Credit Card
+132,05-05-23,1054.4,Entertainment,Cash
+133,05-06-23,4751.03,Transportation,Mobile Payment
+134,03-08-22,1440.83,Charity,Cash
+135,14-12-22,7014.07,Dine Out,Debit Card
+136,06-03-22,1763.39,Groceries,Debit Card
+137,14-06-23,5478.12,Living Expenses,Mobile Payment
+138,12-09-23,1126.73,Medical,Mobile Payment
+139,27-04-22,2958.65,Living Expenses,Credit Card
+140,29-08-23,785.19,Clothing,Credit Card
+141,24-07-22,401.59,Utilities,Debit Card
+142,10-04-22,6372.09,Living Expenses,Mobile Payment
+143,27-09-23,4225.94,Entertainment,Debit Card
+144,29-09-22,2371.3,Groceries,Cash
+145,27-09-22,6885.76,Charity,Debit Card
+146,18-05-22,7535.34,Clothing,Cash
+147,03-12-22,4813.9,Utilities,Cash
+148,16-01-22,5200.47,Medical,Mobile Payment
+149,09-03-22,1199.14,Groceries,Mobile Payment
+150,07-01-22,4388.37,Clothing,Debit Card
+151,21-07-23,5505.4,Entertainment,Debit Card
+152,25-06-23,3127.38,Groceries,Mobile Payment
+153,01-09-22,2354.75,Utilities,Cash
+154,30-01-23,1043.68,Dine Out,Debit Card
+155,15-02-22,5609.05,Charity,Mobile Payment
+156,27-07-22,2728.81,Clothing,Cash
+157,18-12-22,4198.39,Transportation,Debit Card
+158,21-06-22,8588.17,Dine Out,Cash
+159,22-06-23,3779.86,Dine Out,Cash
+160,09-02-22,9064.02,Living Expenses,Mobile Payment
+161,01-10-23,5899.85,Medical,Credit Card
+162,07-02-23,9761.41,Clothing,Mobile Payment
+163,17-12-22,6002.69,Utilities,Debit Card
+164,16-12-23,1144.7,Living Expenses,Debit Card
+165,26-09-23,9985.04,Entertainment,Credit Card
+166,18-09-22,7925.45,Charity,Debit Card
+167,18-06-22,7688.14,Living Expenses,Cash
+168,22-02-23,8029.4,Dine Out,Debit Card
+169,27-12-23,4609.51,Utilities,Credit Card
+170,16-06-23,3404.58,Living Expenses,Cash
+171,23-05-22,1600.1,Medical,Cash
+172,30-09-23,3402.54,Living Expenses,Credit Card
+173,02-07-22,6086.72,Entertainment,Credit Card
+174,15-01-22,5386.39,Clothing,Debit Card
+175,17-01-22,8586.06,Groceries,Mobile Payment
+176,26-03-23,91.18,Transportation,Credit Card
+177,04-12-23,998.52,Transportation,Credit Card
+178,08-07-23,3645.19,Charity,Credit Card
+179,05-02-22,8915.88,Clothing,Cash
+180,07-12-22,9679.78,Dine Out,Mobile Payment
+181,08-01-22,6551.04,Charity,Credit Card
+182,01-12-22,8330.18,Transportation,Credit Card
+183,12-07-22,4590.08,Utilities,Mobile Payment
+184,19-05-22,8975.36,Utilities,Credit Card
+185,11-09-22,6097.47,Groceries,Debit Card
+186,15-11-23,4196.98,Dine Out,Cash
+187,30-04-23,6237.77,Dine Out,Mobile Payment
+188,02-05-22,7214.16,Transportation,Credit Card
+189,28-05-23,3212.08,Medical,Debit Card
+190,19-11-23,2900.89,Living Expenses,Credit Card
+191,19-07-22,5708.36,Living Expenses,Cash
+192,06-12-22,2831.8,Living Expenses,Cash
+193,18-01-22,8336.44,Clothing,Debit Card
+194,28-03-22,5165.69,Medical,Cash
+195,20-06-22,276.4,Living Expenses,Debit Card
+196,08-04-22,1659.45,Dine Out,Debit Card
+197,10-11-22,2097.97,Living Expenses,Debit Card
+198,06-11-23,7570.52,Groceries,Cash
+199,08-06-23,5275.39,Dine Out,Mobile Payment
+200,15-10-23,8901.56,Groceries,Mobile Payment
+201,05-03-22,2671.78,Utilities,Cash
+202,31-01-23,207.54,Medical,Debit Card
+203,02-11-22,6309.71,Groceries,Credit Card
+204,20-05-23,2308.14,Living Expenses,Debit Card
+205,03-09-22,8602.43,Dine Out,Credit Card
+206,15-01-22,3721.46,Utilities,Mobile Payment
+207,29-12-23,1744.85,Entertainment,Cash
+208,12-07-22,1474.52,Dine Out,Debit Card
+209,08-11-23,7242.78,Dine Out,Cash
+210,27-10-22,1475.35,Transportation,Debit Card
+211,29-06-22,798.12,Charity,Cash
+212,28-06-23,6977.45,Living Expenses,Cash
+213,26-12-22,7053.49,Transportation,Cash
+214,03-01-23,9702.13,Entertainment,Debit Card
+215,06-07-23,9059.51,Medical,Mobile Payment
+216,19-04-22,7299.72,Utilities,Debit Card
+217,27-11-23,8348.81,Transportation,Credit Card
+218,13-11-23,1079.07,Medical,Mobile Payment
+219,03-03-22,3707.79,Clothing,Mobile Payment
+220,18-09-23,4175.04,Charity,Cash
+221,10-12-22,2515.91,Medical,Mobile Payment
+222,11-03-23,4000.19,Medical,Debit Card
+223,29-04-23,5253.23,Living Expenses,Cash
+224,05-02-22,6015.16,Medical,Debit Card
+225,14-06-22,9766.95,Entertainment,Mobile Payment
+226,21-05-23,4045.22,Dine Out,Mobile Payment
+227,10-07-22,9.16,Transportation,Credit Card
+228,29-01-23,9013.55,Medical,Debit Card
+229,17-06-22,7502.87,Clothing,Credit Card
+230,30-01-22,4050.5,Groceries,Mobile Payment
+231,15-05-22,7626.63,Entertainment,Credit Card
+232,28-01-22,5355.96,Medical,Credit Card
+233,13-04-23,9162.81,Groceries,Mobile Payment
+234,22-03-23,8237.11,Clothing,Credit Card
+235,26-12-23,8925.87,Entertainment,Mobile Payment
+236,25-07-22,1712.54,Entertainment,Credit Card
+237,18-07-23,5939.49,Living Expenses,Debit Card
+238,31-03-23,8873.25,Transportation,Cash
+239,08-01-23,8982.01,Medical,Mobile Payment
+240,23-09-23,5243.62,Charity,Credit Card
+241,19-12-23,1650.73,Utilities,Mobile Payment
+242,25-07-23,5124.59,Clothing,Mobile Payment
+243,09-07-23,8479.93,Charity,Debit Card
+244,19-06-23,9652.46,Groceries,Credit Card
+245,08-04-22,1251.92,Clothing,Credit Card
+246,20-10-23,6114.44,Charity,Credit Card
+247,15-06-22,7222.88,Clothing,Mobile Payment
+248,05-08-22,1679.83,Medical,Cash
+249,07-10-23,9100.15,Transportation,Debit Card
+250,01-06-23,5638.52,Transportation,Cash
+251,01-01-23,3660.57,Living Expenses,Credit Card
+252,12-07-22,4514.03,Utilities,Credit Card
+253,02-06-22,2078.89,Entertainment,Credit Card
+254,07-10-22,6501.78,Dine Out,Cash
+255,20-03-23,7113.1,Clothing,Cash
+256,20-10-22,2429.87,Dine Out,Credit Card
+257,19-11-22,6282.17,Dine Out,Cash
+258,16-05-22,1015.2,Living Expenses,Credit Card
+259,16-07-23,7914.44,Clothing,Mobile Payment
+260,27-12-22,8920.48,Entertainment,Mobile Payment
+261,23-12-23,6070.08,Living Expenses,Debit Card
+262,03-04-22,7634.37,Utilities,Credit Card
+263,14-10-22,6438.91,Living Expenses,Mobile Payment
+264,03-03-22,7040.14,Entertainment,Debit Card
+265,16-07-23,9450.25,Groceries,Credit Card
+266,03-08-22,8163.82,Transportation,Cash
+267,05-06-22,812.42,Transportation,Debit Card
+268,28-04-22,2555.02,Living Expenses,Debit Card
+269,30-01-23,2044.85,Charity,Debit Card
+270,18-02-22,4890.09,Medical,Cash
+271,19-02-22,69.31,Utilities,Debit Card
+272,10-04-22,1232.89,Charity,Cash
+273,12-10-22,7765.47,Transportation,Credit Card
+274,30-11-23,2007.91,Utilities,Mobile Payment
+275,24-08-22,6733.7,Clothing,Debit Card
+276,18-08-23,1725.21,Clothing,Mobile Payment
+277,10-02-23,4720.34,Groceries,Debit Card
+278,05-08-22,5378.09,Entertainment,Cash
+279,20-04-22,3660.98,Dine Out,Cash
+280,25-02-22,2406.03,Medical,Mobile Payment
+281,24-06-22,1141.45,Clothing,Debit Card
+282,23-07-23,6111.21,Charity,Mobile Payment
+283,20-11-22,9333.78,Clothing,Mobile Payment
+284,21-10-22,3211.43,Transportation,Credit Card
+285,03-09-23,8108.13,Groceries,Credit Card
+286,31-01-23,4173.08,Entertainment,Debit Card
+287,02-09-22,4529.5,Medical,Debit Card
+288,25-12-22,5901.12,Living Expenses,Credit Card
+289,24-11-22,1458.59,Dine Out,Cash
+290,03-05-23,4055.81,Groceries,Mobile Payment
+291,29-07-22,4473.07,Entertainment,Debit Card
+292,07-07-23,2001.38,Groceries,Credit Card
+293,19-04-23,7358.6,Utilities,Credit Card
+294,13-08-23,3179,Groceries,Cash
+295,18-07-22,11.91,Transportation,Cash
+296,19-10-22,7152.75,Dine Out,Credit Card
+297,25-01-22,3431.84,Living Expenses,Cash
+298,30-04-22,1289.22,Clothing,Cash
+299,23-01-22,5480.15,Groceries,Cash
+300,01-04-22,9491.65,Medical,Credit Card
+301,24-02-23,3030.92,Charity,Credit Card
+302,10-03-23,5655.52,Utilities,Cash
+303,14-11-22,9907.98,Dine Out,Credit Card
+304,06-06-23,326.14,Entertainment,Mobile Payment
+305,19-07-22,9984.42,Medical,Cash
+306,12-05-22,6642.9,Entertainment,Cash
+307,19-11-22,2819.38,Medical,Mobile Payment
+308,15-07-22,4287.21,Utilities,Cash
+309,26-01-23,8223.97,Entertainment,Cash
+310,10-07-23,235.22,Medical,Mobile Payment
+311,11-09-22,4676.02,Utilities,Credit Card
+312,25-06-23,61.85,Transportation,Cash
+313,22-06-22,9165.88,Utilities,Cash
+314,17-03-22,2476.57,Charity,Mobile Payment
+315,02-05-23,4660.61,Groceries,Mobile Payment
+316,08-03-22,6266.29,Groceries,Credit Card
+317,28-10-22,8586.33,Entertainment,Credit Card
+318,10-10-23,6886.07,Living Expenses,Debit Card
+319,06-10-22,7028.89,Utilities,Credit Card
+320,25-02-23,9018.01,Transportation,Mobile Payment
+321,10-03-22,1943.48,Entertainment,Credit Card
+322,06-05-22,157.53,Transportation,Cash
+323,04-06-22,3924.45,Clothing,Mobile Payment
+324,23-11-23,8205.31,Medical,Cash
+325,22-09-22,2812.27,Clothing,Cash
+326,19-04-23,526.55,Clothing,Credit Card
+327,01-10-23,2691.79,Groceries,Credit Card
+328,17-09-22,5495.12,Dine Out,Mobile Payment
+329,08-11-23,5416.88,Clothing,Credit Card
+330,15-09-22,621.37,Utilities,Cash
+331,25-12-22,7090.33,Utilities,Mobile Payment
+332,04-06-22,1556.82,Medical,Cash
+333,11-06-22,732.9,Transportation,Mobile Payment
+334,22-11-22,1767.48,Dine Out,Mobile Payment
+335,11-01-23,3651.77,Clothing,Cash
+336,15-06-23,7883.99,Transportation,Cash
+337,27-09-23,3513.73,Living Expenses,Cash
+338,22-09-23,3049.02,Transportation,Mobile Payment
+339,22-08-22,622.32,Entertainment,Mobile Payment
+340,03-03-23,4571.04,Living Expenses,Cash
+341,20-09-22,804.69,Dine Out,Debit Card
+342,17-09-23,3995.8,Dine Out,Cash
+343,14-06-22,7428.71,Entertainment,Mobile Payment
+344,20-05-23,823.23,Dine Out,Credit Card
+345,09-02-23,7180.68,Transportation,Debit Card
+346,10-04-23,3725.94,Dine Out,Mobile Payment
+347,07-07-22,7280.83,Dine Out,Cash
+348,27-07-22,99.26,Medical,Mobile Payment
+349,26-06-23,7560.71,Clothing,Debit Card
+350,22-09-22,9653.49,Living Expenses,Credit Card
+351,03-07-22,1298.85,Medical,Debit Card
+352,03-02-22,1434.96,Groceries,Debit Card
+353,14-10-22,2403.11,Dine Out,Credit Card
+354,29-10-23,1642.37,Utilities,Debit Card
+355,03-05-23,634.97,Utilities,Debit Card
+356,11-06-23,6186.69,Transportation,Credit Card
+357,15-08-23,2355.61,Living Expenses,Cash
+358,27-03-23,1833.26,Dine Out,Credit Card
+359,08-05-23,9942.81,Dine Out,Credit Card
+360,02-11-22,3409.09,Groceries,Debit Card
+361,02-02-23,8073.39,Entertainment,Mobile Payment
+362,02-12-22,9220.1,Groceries,Debit Card
+363,16-12-22,3320.43,Transportation,Credit Card
+364,21-08-23,7968.87,Entertainment,Debit Card
+365,19-01-22,123.4,Clothing,Mobile Payment
+366,10-10-22,8935.76,Charity,Credit Card
+367,23-03-23,4760.71,Medical,Mobile Payment
+368,18-08-23,8274.29,Living Expenses,Credit Card
+369,15-08-23,5336.16,Groceries,Debit Card
+370,15-05-23,6369.76,Medical,Mobile Payment
+371,24-09-23,7251.21,Dine Out,Cash
+372,17-07-22,5062.87,Living Expenses,Cash
+373,13-02-22,5309.2,Medical,Mobile Payment
+374,27-06-23,2448.21,Clothing,Cash
+375,20-02-23,7949.34,Transportation,Debit Card
+376,05-02-22,1917.01,Entertainment,Debit Card
+377,14-04-22,4105.87,Utilities,Mobile Payment
+378,14-05-22,2170.11,Utilities,Mobile Payment
+379,20-08-22,8187.42,Medical,Credit Card
+380,21-04-23,810.6,Clothing,Mobile Payment
+381,11-07-22,5440.66,Entertainment,Debit Card
+382,23-10-23,4949.38,Medical,Credit Card
+383,04-06-22,3325.02,Living Expenses,Mobile Payment
+384,06-04-22,9248.43,Utilities,Credit Card
+385,15-05-22,3007.01,Utilities,Credit Card
+386,01-11-22,2957.8,Clothing,Credit Card
+387,07-07-22,6726.51,Entertainment,Debit Card
+388,27-04-22,7897.14,Transportation,Debit Card
+389,19-12-23,3540.28,Medical,Cash
+390,20-01-22,5589.54,Dine Out,Credit Card
+391,17-07-22,8680.19,Utilities,Credit Card
+392,12-12-23,1313.12,Entertainment,Mobile Payment
+393,09-01-22,1768.14,Medical,Mobile Payment
+394,25-07-22,5928.61,Groceries,Debit Card
+395,28-04-22,9909.22,Living Expenses,Debit Card
+396,16-08-23,1383.47,Medical,Credit Card
+397,30-05-23,2461.27,Medical,Mobile Payment
+398,22-09-22,1282.04,Groceries,Credit Card
+399,17-03-23,7203.92,Utilities,Cash
+400,16-02-22,2345.55,Charity,Credit Card
+401,10-11-22,219.6,Charity,Debit Card
+402,28-08-23,2436.75,Clothing,Mobile Payment
+403,15-05-23,6224.18,Charity,Credit Card
+404,25-04-22,2500.97,Transportation,Debit Card
+405,18-03-22,4197.59,Charity,Debit Card
+406,31-05-22,5803.76,Living Expenses,Credit Card
+407,02-04-22,9093.4,Charity,Mobile Payment
+408,03-03-22,8996.16,Groceries,Credit Card
+409,13-10-23,7279.95,Dine Out,Debit Card
+410,22-06-22,8560.64,Utilities,Debit Card
+411,23-03-22,6635.46,Groceries,Mobile Payment
+412,24-06-23,7054.01,Transportation,Debit Card
+413,17-07-22,184.7,Medical,Debit Card
+414,19-07-22,8908.57,Entertainment,Cash
+415,21-06-23,4445.1,Utilities,Credit Card
+416,30-03-22,7294.3,Groceries,Debit Card
+417,25-02-22,2303.06,Groceries,Cash
+418,13-07-23,7992.26,Living Expenses,Credit Card
+419,02-12-22,1884.74,Medical,Debit Card
+420,10-02-23,2362.97,Dine Out,Mobile Payment
+421,19-02-23,9628.87,Medical,Cash
+422,15-08-22,1010.54,Dine Out,Mobile Payment
+423,26-04-23,7696.37,Medical,Credit Card
+424,08-01-23,5931.28,Groceries,Credit Card
+425,20-02-23,715.57,Clothing,Cash
+426,31-07-23,3923.24,Utilities,Cash
+427,13-03-23,719.86,Living Expenses,Mobile Payment
+428,10-11-23,2429.43,Charity,Cash
+429,18-11-22,3584.82,Entertainment,Debit Card
+430,24-06-23,8776.88,Clothing,Cash
+431,24-07-22,9771.63,Dine Out,Debit Card
+432,13-08-22,8913.26,Transportation,Cash
+433,25-04-22,1214.08,Living Expenses,Mobile Payment
+434,26-11-22,4770.95,Transportation,Cash
+435,02-03-23,2176.15,Transportation,Mobile Payment
+436,03-05-23,8850.51,Entertainment,Cash
+437,17-04-23,8528.98,Transportation,Mobile Payment
+438,06-01-22,9757.33,Medical,Cash
+439,26-10-22,8042.11,Charity,Debit Card
+440,04-11-23,2669.84,Charity,Debit Card
+441,23-10-22,8574.34,Groceries,Debit Card
+442,10-06-22,9187.17,Clothing,Credit Card
+443,10-08-23,6317.66,Dine Out,Debit Card
+444,05-06-22,1751.87,Entertainment,Credit Card
+445,16-11-23,9203.91,Dine Out,Cash
+446,23-06-22,98.24,Utilities,Debit Card
+447,28-06-23,679.1,Clothing,Credit Card
+448,10-10-22,4160.46,Clothing,Mobile Payment
+449,21-12-22,3598.51,Utilities,Mobile Payment
+450,16-02-22,377.79,Groceries,Debit Card
+451,05-06-22,6057.55,Entertainment,Mobile Payment
+452,19-12-22,3133.54,Living Expenses,Cash
+453,18-11-22,3744.79,Dine Out,Cash
+454,20-05-22,620.31,Groceries,Debit Card
+455,30-09-23,2673.13,Groceries,Mobile Payment
+456,03-12-22,7487.83,Living Expenses,Cash
+457,23-07-22,4804.31,Transportation,Cash
+458,30-05-23,8858.45,Entertainment,Credit Card
+459,22-10-22,2644.24,Dine Out,Debit Card
+460,01-02-23,9500.55,Living Expenses,Debit Card
+461,26-03-22,9769.2,Dine Out,Cash
+462,19-08-22,3764.27,Utilities,Cash
+463,08-11-22,1893.31,Clothing,Mobile Payment
+464,15-12-23,692.7,Clothing,Credit Card
+465,18-08-23,9470.93,Charity,Debit Card
+466,15-08-23,2087.58,Clothing,Cash
+467,26-06-23,7236.87,Charity,Debit Card
+468,15-08-23,446.1,Charity,Credit Card
+469,11-11-22,5743.24,Utilities,Debit Card
+470,18-09-23,2202.48,Clothing,Cash
+471,09-11-22,5278.66,Clothing,Debit Card
+472,13-03-22,5623.51,Utilities,Mobile Payment
+473,24-04-22,3258.9,Charity,Credit Card
+474,07-02-22,716.62,Living Expenses,Debit Card
+475,14-11-23,9805.52,Dine Out,Cash
+476,27-01-22,7939.67,Living Expenses,Cash
+477,11-05-22,1878.69,Utilities,Cash
+478,28-04-23,9972.84,Entertainment,Mobile Payment
+479,06-03-23,7330.14,Clothing,Cash
+480,09-11-23,4859.93,Clothing,Credit Card
+481,13-10-23,5842.62,Entertainment,Cash
+482,10-06-23,7104.02,Entertainment,Cash
+483,18-08-23,2601.42,Clothing,Cash
+484,22-06-22,4632.69,Utilities,Debit Card
+485,19-09-22,8599.21,Charity,Debit Card
+486,17-09-23,4570.28,Dine Out,Credit Card
+487,23-10-23,3627.87,Entertainment,Mobile Payment
+488,05-05-23,3405.8,Clothing,Mobile Payment
+489,22-10-23,824.09,Living Expenses,Credit Card
+490,11-01-22,3816.81,Living Expenses,Mobile Payment
+491,01-11-23,4956.35,Utilities,Debit Card
+492,04-01-23,9372.77,Entertainment,Debit Card
+493,03-04-22,3468.02,Living Expenses,Cash
+494,16-10-22,7342.5,Dine Out,Debit Card
+495,14-08-22,7420.94,Living Expenses,Mobile Payment
+496,17-05-22,2731.24,Entertainment,Cash
+497,26-02-23,9872.75,Charity,Cash
+498,05-04-23,3874.95,Entertainment,Cash
+499,08-02-22,9432.49,Utilities,Mobile Payment
+500,29-07-22,5680.97,Groceries,Cash
+501,23-02-22,4984.39,Groceries,Cash
+502,27-11-22,8836.94,Entertainment,Debit Card
+503,15-11-23,5547.88,Utilities,Credit Card
+504,01-05-23,4081.73,Utilities,Cash
+505,09-05-22,5847.72,Transportation,Mobile Payment
+506,14-03-23,7876.54,Charity,Mobile Payment
+507,30-08-22,2372.6,Entertainment,Credit Card
+508,21-03-23,906.62,Living Expenses,Mobile Payment
+509,20-01-22,7149.83,Charity,Cash
+510,21-09-23,9886.14,Groceries,Cash
+511,05-06-23,6482.8,Utilities,Mobile Payment
+512,18-09-22,3428.3,Living Expenses,Mobile Payment
+513,23-11-22,3061.52,Entertainment,Credit Card
+514,12-01-22,5756.77,Clothing,Cash
+515,24-07-22,6013.09,Dine Out,Mobile Payment
+516,16-08-23,736.8,Living Expenses,Credit Card
+517,28-06-22,1576.54,Transportation,Mobile Payment
+518,13-07-22,5571.19,Entertainment,Cash
+519,27-02-22,2928.7,Transportation,Credit Card
+520,13-06-22,4005.34,Utilities,Debit Card
+521,12-09-23,5219.51,Transportation,Mobile Payment
+522,26-05-23,8059.93,Transportation,Cash
+523,06-04-22,8355.87,Dine Out,Credit Card
+524,28-01-22,5723.85,Charity,Debit Card
+525,05-09-22,4175,Living Expenses,Credit Card
+526,28-02-23,4078.62,Medical,Cash
+527,14-11-23,3107.72,Medical,Mobile Payment
+528,26-11-22,8170.38,Utilities,Credit Card
+529,25-10-23,3660.77,Clothing,Debit Card
+530,14-07-23,7756.45,Transportation,Mobile Payment
+531,13-06-23,745.98,Medical,Cash
+532,10-12-23,832.12,Entertainment,Mobile Payment
+533,13-02-22,3221.6,Entertainment,Credit Card
+534,07-03-23,4810.15,Living Expenses,Credit Card
+535,04-09-23,3043.6,Utilities,Credit Card
+536,09-04-23,6395.11,Dine Out,Cash
+537,29-08-22,5873.82,Utilities,Credit Card
+538,13-03-23,9135.58,Medical,Cash
+539,20-03-23,260.97,Transportation,Mobile Payment
+540,02-03-22,2951.95,Groceries,Credit Card
+541,29-06-23,6010.76,Charity,Credit Card
+542,13-09-22,2524.9,Utilities,Cash
+543,02-02-23,5056.46,Transportation,Mobile Payment
+544,07-05-22,8109.22,Medical,Debit Card
+545,15-08-22,5795.41,Living Expenses,Cash
+546,27-08-22,3828.11,Medical,Credit Card
+547,12-04-23,9579.71,Utilities,Mobile Payment
+548,16-12-22,6841.88,Transportation,Cash
+549,25-11-23,3532.61,Entertainment,Credit Card
+550,03-10-23,8014.06,Dine Out,Mobile Payment
+551,18-09-23,3161.16,Entertainment,Debit Card
+552,13-10-23,6037.92,Charity,Debit Card
+553,11-04-22,7313.82,Entertainment,Credit Card
+554,30-12-23,9272.28,Transportation,Debit Card
+555,06-11-23,3228.8,Living Expenses,Mobile Payment
+556,13-05-23,1438.87,Groceries,Cash
+557,15-12-23,1855.5,Entertainment,Mobile Payment
+558,12-05-22,1034.87,Transportation,Mobile Payment
+559,10-08-22,2987.07,Dine Out,Mobile Payment
+560,22-09-22,4753.68,Dine Out,Mobile Payment
+561,16-02-22,8883.45,Utilities,Debit Card
+562,06-11-22,789.74,Charity,Credit Card
+563,30-07-23,4154.71,Utilities,Cash
+564,11-11-22,5481.61,Medical,Debit Card
+565,19-07-23,3712.6,Utilities,Credit Card
+566,11-08-22,4183.11,Charity,Cash
+567,26-09-23,4583.6,Charity,Debit Card
+568,25-02-23,619.13,Entertainment,Cash
+569,24-06-22,2788.71,Groceries,Cash
+570,28-02-22,8558.05,Groceries,Cash
+571,23-03-22,9174.62,Groceries,Cash
+572,08-06-22,7197.13,Transportation,Debit Card
+573,04-06-23,5758.64,Utilities,Credit Card
+574,15-02-22,4381.03,Living Expenses,Credit Card
+575,30-11-23,7603.43,Utilities,Cash
+576,06-12-23,2428.9,Medical,Credit Card
+577,08-07-23,3147.88,Groceries,Debit Card
+578,05-04-22,3533.41,Dine Out,Mobile Payment
+579,06-09-22,9190.45,Entertainment,Mobile Payment
+580,10-11-23,9879.01,Entertainment,Credit Card
+581,12-10-22,7468.94,Groceries,Cash
+582,15-10-23,5433.93,Clothing,Cash
+583,23-10-22,2939.71,Medical,Debit Card
+584,22-06-22,4621.93,Transportation,Debit Card
+585,09-05-23,2478.78,Dine Out,Mobile Payment
+586,16-06-23,4862.32,Entertainment,Debit Card
+587,15-01-23,7952.72,Transportation,Debit Card
+588,31-10-23,2600.64,Living Expenses,Mobile Payment
+589,29-05-22,9818.95,Entertainment,Cash
+590,19-06-22,4186.43,Dine Out,Debit Card
+591,01-04-23,7202.48,Groceries,Mobile Payment
+592,22-10-22,4816.99,Medical,Cash
+593,20-02-23,8388.33,Living Expenses,Credit Card
+594,19-09-22,7754.64,Groceries,Cash
+595,31-01-22,3446.29,Living Expenses,Cash
+596,28-09-23,4414.59,Dine Out,Cash
+597,23-09-23,1427.68,Utilities,Debit Card
+598,14-05-23,6593.77,Medical,Cash
+599,23-01-22,2503.27,Entertainment,Mobile Payment
+600,11-02-23,7050.93,Living Expenses,Debit Card
+601,23-06-22,9774.01,Dine Out,Cash
+602,21-05-23,679.83,Entertainment,Cash
+603,17-08-23,741.58,Charity,Debit Card
+604,12-06-23,5525.25,Medical,Credit Card
+605,07-08-22,2639.94,Entertainment,Cash
+606,04-07-23,2002.34,Charity,Debit Card
+607,04-11-22,8567.49,Charity,Cash
+608,25-11-23,7625.54,Clothing,Credit Card
+609,09-08-23,956.77,Living Expenses,Cash
+610,29-01-23,637.98,Dine Out,Mobile Payment
+611,21-10-23,2246.22,Living Expenses,Debit Card
+612,04-08-22,8435.49,Groceries,Mobile Payment
+613,10-05-22,9329.84,Transportation,Cash
+614,30-01-23,6523.42,Clothing,Debit Card
+615,08-03-22,57.72,Transportation,Debit Card
+616,13-03-22,3843.84,Utilities,Credit Card
+617,04-02-23,242.06,Living Expenses,Cash
+618,29-10-23,4614.59,Medical,Debit Card
+619,04-06-22,2362.84,Transportation,Debit Card
+620,01-09-23,2546.64,Charity,Credit Card
+621,11-10-22,4889.21,Living Expenses,Cash
+622,16-05-23,5148.91,Utilities,Cash
+623,30-05-22,1778.26,Living Expenses,Mobile Payment
+624,09-05-22,5100.09,Living Expenses,Debit Card
+625,21-05-22,5011.92,Living Expenses,Debit Card
+626,13-04-23,6162.39,Charity,Cash
+627,01-06-23,8711.74,Groceries,Mobile Payment
+628,31-05-22,4481.79,Dine Out,Cash
+629,08-12-23,2658.35,Charity,Debit Card
+630,29-12-23,1087.39,Clothing,Mobile Payment
+631,31-05-22,3139.09,Transportation,Debit Card
+632,04-05-23,8878.01,Medical,Mobile Payment
+633,17-01-23,8286.83,Charity,Mobile Payment
+634,28-10-22,7138.93,Charity,Credit Card
+635,04-11-23,4323.5,Clothing,Debit Card
+636,13-09-23,8552.58,Utilities,Debit Card
+637,05-04-22,8163.41,Dine Out,Cash
+638,02-06-23,6208.8,Utilities,Debit Card
+639,29-01-22,2157.05,Groceries,Mobile Payment
+640,19-08-23,3565.45,Living Expenses,Mobile Payment
+641,07-08-22,6984.7,Medical,Cash
+642,09-09-23,3978.41,Transportation,Cash
+643,14-07-22,3883.79,Transportation,Debit Card
+644,22-11-23,9861.15,Medical,Cash
+645,09-02-22,4851.02,Living Expenses,Cash
+646,12-12-23,6316.02,Groceries,Debit Card
+647,20-08-23,1654.83,Dine Out,Debit Card
+648,26-09-22,6857.04,Medical,Cash
+649,16-08-22,1802.7,Dine Out,Credit Card
+650,03-07-23,3120.17,Medical,Credit Card
+651,18-04-23,8990.79,Medical,Mobile Payment
+652,16-05-23,9965.62,Medical,Debit Card
+653,05-08-23,1900.12,Utilities,Credit Card
+654,13-02-22,658.04,Transportation,Credit Card
+655,30-08-23,5653.28,Transportation,Debit Card
+656,26-02-22,2079.59,Clothing,Mobile Payment
+657,09-08-23,9965.93,Utilities,Debit Card
+658,26-10-23,5762.05,Utilities,Debit Card
+659,17-12-22,5697.91,Transportation,Cash
+660,16-10-23,1699.74,Dine Out,Debit Card
+661,11-10-23,9096.7,Medical,Credit Card
+662,05-06-22,9178.86,Entertainment,Credit Card
+663,28-01-23,3888.2,Dine Out,Cash
+664,29-04-23,3508.1,Utilities,Cash
+665,09-10-22,4771.61,Entertainment,Mobile Payment
+666,12-09-23,6291.42,Clothing,Credit Card
+667,18-03-23,7444.97,Groceries,Mobile Payment
+668,23-04-23,6393.64,Utilities,Debit Card
+669,26-02-23,8847.78,Groceries,Credit Card
+670,01-06-23,7931.85,Utilities,Cash
+671,20-11-23,3029.72,Utilities,Credit Card
+672,08-11-23,5092.16,Transportation,Debit Card
+673,24-06-22,2983.28,Transportation,Credit Card
+674,11-10-23,4834.11,Medical,Credit Card
+675,28-10-23,2423.62,Entertainment,Debit Card
+676,17-10-22,8808.37,Charity,Debit Card
+677,22-01-23,3686.38,Groceries,Mobile Payment
+678,18-12-23,1619.08,Transportation,Mobile Payment
+679,14-12-22,9380.25,Transportation,Credit Card
+680,24-11-23,5642.64,Medical,Debit Card
+681,01-10-22,156.74,Entertainment,Cash
+682,01-07-22,1033.62,Medical,Debit Card
+683,24-11-23,1787.77,Transportation,Cash
+684,02-10-22,778.08,Medical,Debit Card
+685,13-01-23,6520.85,Dine Out,Mobile Payment
+686,28-02-23,6768.08,Clothing,Debit Card
+687,22-05-22,2557.47,Entertainment,Credit Card
+688,27-02-23,637.75,Medical,Cash
+689,19-09-22,8787.97,Dine Out,Credit Card
+690,06-05-23,5460.3,Medical,Credit Card
+691,03-10-22,6783.31,Utilities,Cash
+692,20-07-22,9845.43,Living Expenses,Mobile Payment
+693,15-12-22,2178.4,Utilities,Credit Card
+694,30-09-22,3823.26,Groceries,Debit Card
+695,09-01-23,8148.77,Living Expenses,Credit Card
+696,04-11-23,7730.52,Groceries,Debit Card
+697,05-07-23,2092.93,Groceries,Credit Card
+698,24-03-23,4613.45,Medical,Cash
+699,22-10-23,8594.17,Charity,Mobile Payment
+700,12-08-23,8282.81,Medical,Debit Card
+701,30-08-23,3724.84,Charity,Debit Card
+702,02-07-22,3800.72,Charity,Credit Card
+703,24-06-23,4121.45,Dine Out,Credit Card
+704,24-07-22,9989.48,Groceries,Cash
+705,24-11-23,831.76,Living Expenses,Mobile Payment
+706,14-07-23,6216.15,Medical,Debit Card
+707,20-11-22,4530.93,Dine Out,Cash
+708,23-10-23,5959.78,Groceries,Mobile Payment
+709,12-05-22,1743.76,Medical,Mobile Payment
+710,20-05-23,7640.4,Living Expenses,Credit Card
+711,07-08-23,6269.36,Transportation,Mobile Payment
+712,10-03-23,3956.38,Living Expenses,Debit Card
+713,06-07-23,1528.51,Medical,Credit Card
+714,01-02-23,3502.63,Groceries,Debit Card
+715,07-12-23,9647.23,Entertainment,Debit Card
+716,25-11-23,8535.36,Dine Out,Debit Card
+717,06-02-23,5086.96,Utilities,Debit Card
+718,08-08-23,9869.18,Clothing,Cash
+719,21-02-22,2047.43,Charity,Cash
+720,14-11-22,3385.95,Medical,Cash
+721,22-08-22,6012.75,Charity,Credit Card
+722,01-04-22,1847.34,Entertainment,Credit Card
+723,16-12-23,9086.28,Living Expenses,Debit Card
+724,22-06-22,668.87,Groceries,Cash
+725,05-09-22,3007.95,Utilities,Credit Card
+726,24-03-22,6290.43,Dine Out,Debit Card
+727,17-02-22,1218.66,Dine Out,Mobile Payment
+728,22-01-23,7431.32,Clothing,Cash
+729,11-06-22,9374.73,Charity,Mobile Payment
+730,04-08-22,7433.71,Living Expenses,Mobile Payment
+731,04-06-23,6637.89,Clothing,Mobile Payment
+732,24-08-23,1775.37,Utilities,Mobile Payment
+733,28-02-23,9564.11,Transportation,Mobile Payment
+734,12-09-22,2325.23,Utilities,Credit Card
+735,01-07-22,8631.31,Groceries,Debit Card
+736,20-06-22,7752.19,Transportation,Cash
+737,06-01-22,8441.62,Utilities,Credit Card
+738,17-02-22,8481.7,Groceries,Debit Card
+739,01-12-23,5008.18,Clothing,Cash
+740,17-12-23,5487.92,Charity,Cash
+741,13-02-23,4044.75,Transportation,Debit Card
+742,19-11-22,6957.38,Dine Out,Credit Card
+743,22-10-22,2632.36,Charity,Mobile Payment
+744,06-03-23,3137.04,Charity,Debit Card
+745,21-11-22,2562.41,Medical,Mobile Payment
+746,20-09-23,5158.42,Transportation,Mobile Payment
+747,09-11-22,3339.14,Utilities,Debit Card
+748,27-01-22,5147.68,Charity,Debit Card
+749,20-01-23,6454.39,Dine Out,Debit Card
+750,04-03-22,5884.3,Clothing,Credit Card
+751,05-10-22,9317.94,Utilities,Cash
+752,18-12-22,140.2,Dine Out,Cash
+753,23-07-23,2781.13,Dine Out,Mobile Payment
+754,14-10-22,5599.99,Transportation,Mobile Payment
+755,28-02-23,925.46,Utilities,Cash
+756,24-01-22,6717.87,Transportation,Debit Card
+757,29-09-22,8286.71,Living Expenses,Cash
+758,07-01-22,3013.49,Living Expenses,Cash
+759,20-06-23,5210.94,Charity,Debit Card
+760,20-09-22,9063.61,Medical,Credit Card
+761,12-04-23,2728.22,Medical,Debit Card
+762,27-04-23,2227.08,Entertainment,Mobile Payment
+763,07-05-22,2695.24,Transportation,Debit Card
+764,29-12-22,4486.91,Living Expenses,Debit Card
+765,03-03-23,4584.15,Transportation,Credit Card
+766,08-01-23,6958.82,Medical,Debit Card
+767,13-12-22,348.41,Medical,Debit Card
+768,05-11-23,5445.37,Utilities,Credit Card
+769,20-03-22,3387.97,Medical,Debit Card
+770,11-07-23,5322.51,Clothing,Cash
+771,03-08-22,5274.65,Entertainment,Credit Card
+772,14-03-23,7997.1,Groceries,Mobile Payment
+773,18-06-23,493.78,Charity,Debit Card
+774,27-08-22,8425.26,Clothing,Cash
+775,11-12-23,361.71,Medical,Credit Card
+776,21-02-22,5626.11,Transportation,Debit Card
+777,06-12-22,5173.79,Living Expenses,Debit Card
+778,02-05-23,9259.03,Charity,Mobile Payment
+779,06-01-23,4388.99,Utilities,Debit Card
+780,21-08-22,7716.49,Charity,Debit Card
+781,01-10-22,2073.62,Utilities,Cash
+782,25-10-22,4647.44,Living Expenses,Debit Card
+783,03-07-23,5562.86,Transportation,Debit Card
+784,01-02-23,1262.18,Entertainment,Debit Card
+785,19-01-22,7449.51,Charity,Credit Card
+786,15-10-22,9560.16,Living Expenses,Mobile Payment
+787,25-12-23,624.02,Utilities,Credit Card
+788,14-06-22,6141.38,Dine Out,Mobile Payment
+789,08-01-22,9834.83,Medical,Mobile Payment
+790,22-05-23,5364.88,Transportation,Cash
+791,29-01-22,7867.9,Transportation,Cash
+792,08-07-23,4944.61,Transportation,Mobile Payment
+793,18-04-23,6549.84,Utilities,Mobile Payment
+794,25-07-22,3787.45,Groceries,Credit Card
+795,02-09-22,5557.51,Medical,Cash
+796,16-06-22,4652.76,Clothing,Credit Card
+797,05-09-23,5549.72,Entertainment,Credit Card
+798,30-11-23,403.57,Groceries,Cash
+799,04-01-22,6316.69,Dine Out,Credit Card
+800,28-01-22,860.21,Charity,Credit Card
+801,26-11-23,9090.03,Dine Out,Cash
+802,22-05-22,3139.04,Medical,Debit Card
+803,08-05-23,284.72,Dine Out,Cash
+804,20-01-23,1462.49,Utilities,Credit Card
+805,29-10-22,1823.27,Medical,Debit Card
+806,11-08-22,7067.33,Clothing,Credit Card
+807,18-12-22,4758.13,Utilities,Cash
+808,19-04-23,5078.65,Utilities,Cash
+809,25-04-23,6322.64,Charity,Credit Card
+810,13-01-23,8373.55,Transportation,Credit Card
+811,22-10-22,9521.72,Living Expenses,Debit Card
+812,27-09-22,1739.96,Groceries,Debit Card
+813,17-01-22,8039.05,Entertainment,Debit Card
+814,28-10-22,6149.55,Groceries,Debit Card
+815,08-11-22,5704.15,Dine Out,Cash
+816,29-05-23,8308.1,Living Expenses,Mobile Payment
+817,18-12-23,6144.87,Clothing,Cash
+818,15-04-23,7984.84,Groceries,Debit Card
+819,14-08-22,8860.92,Medical,Credit Card
+820,10-08-23,15.39,Living Expenses,Cash
+821,13-05-23,8393.94,Transportation,Cash
+822,11-03-23,931.74,Entertainment,Debit Card
+823,08-01-23,2820.16,Dine Out,Mobile Payment
+824,11-09-23,6184.81,Charity,Mobile Payment
+825,11-06-23,3137.18,Clothing,Mobile Payment
+826,02-11-22,7414.15,Dine Out,Mobile Payment
+827,06-10-23,705.66,Dine Out,Mobile Payment
+828,23-01-23,1032.13,Medical,Mobile Payment
+829,27-04-22,1144.84,Clothing,Mobile Payment
+830,03-09-23,5688.85,Medical,Cash
+831,24-05-22,2481.04,Living Expenses,Mobile Payment
+832,12-12-22,8061.46,Transportation,Debit Card
+833,19-03-22,3202.22,Entertainment,Credit Card
+834,24-05-22,7783.04,Utilities,Debit Card
+835,14-03-23,6586.56,Living Expenses,Credit Card
+836,09-07-22,7686.44,Living Expenses,Debit Card
+837,12-03-23,6100.69,Entertainment,Credit Card
+838,17-06-23,622.92,Transportation,Cash
+839,17-01-22,3863.5,Living Expenses,Cash
+840,23-06-22,7860.47,Clothing,Credit Card
+841,25-11-23,8677.69,Utilities,Credit Card
+842,09-02-22,7740.44,Clothing,Debit Card
+843,12-08-23,5225.31,Entertainment,Mobile Payment
+844,28-12-22,336.91,Groceries,Credit Card
+845,19-10-22,3214.08,Living Expenses,Mobile Payment
+846,14-10-23,4202.33,Entertainment,Debit Card
+847,21-01-22,5704.76,Transportation,Debit Card
+848,02-08-22,9200.71,Entertainment,Cash
+849,04-04-22,5751.54,Utilities,Cash
+850,26-08-23,2585.29,Transportation,Mobile Payment
+851,25-11-23,1479.2,Transportation,Cash
+852,29-08-23,3338.78,Utilities,Credit Card
+853,15-09-23,293.65,Medical,Credit Card
+854,12-02-22,7485.57,Medical,Cash
+855,20-12-22,6137.46,Transportation,Credit Card
+856,16-10-23,4960.66,Utilities,Credit Card
+857,26-09-23,5636.02,Charity,Cash
+858,03-05-22,4004.95,Utilities,Credit Card
+859,25-10-23,8358.46,Medical,Debit Card
+860,03-11-23,9341.38,Groceries,Cash
+861,28-07-22,1392.58,Clothing,Mobile Payment
+862,27-08-22,2426.76,Entertainment,Debit Card
+863,18-05-23,3440.59,Charity,Cash
+864,18-11-23,3231.46,Groceries,Credit Card
+865,05-06-22,7272.48,Clothing,Credit Card
+866,05-07-23,9016.64,Transportation,Credit Card
+867,30-12-22,4515.38,Living Expenses,Debit Card
+868,23-04-22,361.34,Charity,Debit Card
+869,14-08-22,3844.51,Transportation,Mobile Payment
+870,07-11-23,9941.8,Transportation,Credit Card
+871,26-02-23,2106.74,Medical,Cash
+872,14-06-23,6470.19,Clothing,Credit Card
+873,16-07-22,7633.36,Medical,Cash
+874,06-06-23,3723.07,Clothing,Mobile Payment
+875,26-11-23,7923.6,Dine Out,Debit Card
+876,29-04-23,7575.83,Transportation,Cash
+877,07-12-23,3183.27,Transportation,Credit Card
+878,12-12-22,9037.42,Clothing,Cash
+879,20-12-23,6058.48,Clothing,Cash
+880,02-03-23,9788.79,Charity,Cash
+881,25-03-22,7712.17,Charity,Credit Card
+882,17-11-22,6234.82,Transportation,Cash
+883,23-01-23,1947.6,Dine Out,Mobile Payment
+884,26-06-22,5510.74,Clothing,Debit Card
+885,11-01-23,2645.25,Charity,Debit Card
+886,09-11-22,8467.56,Medical,Credit Card
+887,02-03-23,8756.44,Transportation,Mobile Payment
+888,13-08-23,9849.09,Groceries,Mobile Payment
+889,24-01-23,3458.6,Clothing,Credit Card
+890,03-10-22,4744.19,Utilities,Cash
+891,03-02-23,8538.05,Clothing,Mobile Payment
+892,17-01-22,9476.72,Medical,Debit Card
+893,25-11-22,4704.16,Charity,Cash
+894,01-01-22,8736.22,Medical,Cash
+895,14-08-22,7856.23,Living Expenses,Credit Card
+896,21-01-22,2106.66,Clothing,Credit Card
+897,19-09-22,7021.9,Groceries,Cash
+898,12-06-23,2336.53,Groceries,Debit Card
+899,16-08-22,6505.57,Living Expenses,Debit Card
+900,24-10-22,8116.29,Entertainment,Debit Card
+901,20-01-22,2513.27,Entertainment,Cash
+902,17-03-22,3699.4,Utilities,Credit Card
+903,22-04-23,4873.56,Dine Out,Credit Card
+904,04-03-23,5587.43,Medical,Credit Card
+905,10-07-23,8617.04,Transportation,Mobile Payment
+906,15-04-23,4314.43,Entertainment,Cash
+907,07-11-22,8100.84,Medical,Credit Card
+908,18-02-23,5126.16,Dine Out,Credit Card
+909,14-10-23,9421.27,Living Expenses,Credit Card
+910,09-12-22,509.77,Charity,Cash
+911,17-08-22,8340.11,Entertainment,Cash
+912,17-08-22,4978.19,Groceries,Credit Card
+913,21-03-22,7231.6,Entertainment,Mobile Payment
+914,14-07-22,3162.12,Dine Out,Debit Card
+915,29-09-23,8752.82,Entertainment,Mobile Payment
+916,18-02-22,4745.16,Utilities,Debit Card
+917,01-06-22,9751.09,Medical,Mobile Payment
+918,02-11-23,5902.72,Clothing,Credit Card
+919,22-01-22,2211.92,Entertainment,Mobile Payment
+920,18-01-23,2700.04,Utilities,Debit Card
+921,19-05-22,1003.49,Living Expenses,Cash
+922,15-10-23,7491.98,Groceries,Credit Card
+923,07-02-22,5600.73,Clothing,Credit Card
+924,05-11-22,5935.98,Charity,Cash
+925,22-07-22,8822.22,Living Expenses,Cash
+926,16-01-22,4180.42,Transportation,Debit Card
+927,14-03-22,3570.93,Groceries,Mobile Payment
+928,12-05-22,3158.06,Clothing,Cash
+929,19-01-23,8210.33,Clothing,Debit Card
+930,27-03-22,4352.58,Transportation,Mobile Payment
+931,04-11-23,9772.3,Dine Out,Debit Card
+932,17-12-23,3534.07,Groceries,Cash
+933,06-07-23,2568.35,Entertainment,Credit Card
+934,16-05-23,2409.05,Entertainment,Debit Card
+935,27-10-23,8987.69,Dine Out,Debit Card
+936,04-08-23,7936.27,Dine Out,Mobile Payment
+937,06-09-22,9017.2,Medical,Credit Card
+938,03-06-22,2762.07,Utilities,Debit Card
+939,02-03-22,2307.51,Dine Out,Cash
+940,24-09-22,9233.62,Groceries,Mobile Payment
+941,01-01-22,7360.42,Groceries,Debit Card
+942,04-11-22,916.58,Clothing,Credit Card
+943,03-03-22,4778.16,Living Expenses,Debit Card
+944,30-07-22,7069.81,Charity,Credit Card
+945,26-10-23,5483.71,Clothing,Credit Card
+946,21-02-22,2261,Clothing,Debit Card
+947,03-09-22,3642.39,Clothing,Credit Card
+948,14-03-22,2001.9,Clothing,Mobile Payment
+949,06-06-23,8473.76,Clothing,Credit Card
+950,19-10-23,2159.11,Living Expenses,Mobile Payment
+951,17-09-23,7887.87,Clothing,Debit Card
+952,24-04-22,3430.31,Dine Out,Debit Card
+953,04-12-22,2159.04,Dine Out,Debit Card
+954,10-01-22,7717.64,Transportation,Mobile Payment
+955,15-03-23,5612.96,Dine Out,Mobile Payment
+956,05-07-23,7342.97,Utilities,Cash
+957,21-07-23,519,Clothing,Mobile Payment
+958,06-11-22,8437.04,Clothing,Debit Card
+959,13-08-23,1527.86,Groceries,Mobile Payment
+960,02-03-23,7616.2,Transportation,Mobile Payment
+961,23-10-23,379.69,Groceries,Mobile Payment
+962,29-04-22,8321.89,Charity,Credit Card
+963,24-04-22,7149.89,Charity,Cash
+964,09-02-22,9267.42,Clothing,Cash
+965,03-12-23,3726.57,Dine Out,Mobile Payment
+966,13-03-22,4182.64,Utilities,Credit Card
+967,15-07-22,1561.96,Living Expenses,Mobile Payment
+968,28-08-23,3296.25,Utilities,Mobile Payment
+969,22-10-22,3737.92,Dine Out,Cash
+970,13-07-22,3846.11,Groceries,Credit Card
+971,22-12-22,5082.25,Entertainment,Cash
+972,11-08-23,6318.66,Dine Out,Credit Card
+973,24-02-22,9492.94,Entertainment,Debit Card
+974,11-09-23,2431.6,Transportation,Cash
+975,23-08-23,8420.37,Charity,Mobile Payment
+976,23-03-23,5735.11,Charity,Mobile Payment
+977,21-12-23,261.05,Living Expenses,Debit Card
+978,01-09-22,8488.39,Transportation,Cash
+979,18-12-23,9868.32,Groceries,Cash
+980,23-04-22,7841.28,Entertainment,Credit Card
+981,08-03-23,4381.46,Dine Out,Cash
+982,13-01-22,7215.59,Clothing,Debit Card
+983,22-04-23,2724.99,Charity,Debit Card
+984,30-05-23,3942.57,Dine Out,Cash
+985,24-08-22,1951.97,Clothing,Mobile Payment
+986,27-10-23,5463.92,Transportation,Debit Card
+987,11-01-22,6960.17,Groceries,Cash
+988,13-10-22,7545.05,Entertainment,Cash
+989,06-06-22,1866.87,Charity,Mobile Payment
+990,09-03-22,3881.56,Living Expenses,Credit Card
+991,10-09-22,7443.4,Charity,Cash
+992,18-09-23,107.15,Entertainment,Credit Card
+993,02-04-23,3342.04,Living Expenses,Debit Card
+994,08-06-23,3374.98,Medical,Debit Card
+995,22-09-22,5830.01,Charity,Credit Card
+996,17-08-22,2823.43,Groceries,Credit Card
+997,03-04-23,7390.74,Clothing,Debit Card
+998,18-04-22,6407.17,Entertainment,Cash
+999,28-02-22,6565.37,Living Expenses,Cash
+1000,10-02-22,4487.17,Utilities,Cash
