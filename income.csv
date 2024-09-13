@@ -1,0 +1,1001 @@
+income_id,date,amount,category,method
+1,01/18/2023,$5000.15,Secondary,Bank Transfer
+2,09/24/2023,$305.55,Primary,Online
+3,07/18/2022,$1090.91,Primary,Online
+4,01/05/2022,$5182.12,Passive,Online
+5,07/12/2022,$8477.92,Passive,Online
+6,08/23/2022,$9527.19,Primary,Bank Transfer
+7,06/14/2023,$9501.52,Passive,Online
+8,01/17/2023,$5046.71,Primary,Bank Transfer
+9,07/06/2022,$2899.94,Primary,Online
+10,03/15/2022,$6783.16,Passive,Bank Transfer
+11,09/25/2022,$3685.37,Passive,Bank Transfer
+12,09/06/2023,$6180.93,Primary,Online
+13,08/26/2023,$1867.04,Secondary,Online
+14,07/27/2023,$5688.35,Secondary,Online
+15,07/04/2022,$9329.36,Passive,Bank Transfer
+16,11/10/2023,$746.45,Secondary,Online
+17,08/22/2022,$1246.10,Secondary,Online
+18,09/16/2022,$2977.72,Secondary,Online
+19,08/25/2022,$1142.39,Passive,Online
+20,11/06/2023,$8538.91,Primary,Online
+21,06/12/2023,$3621.23,Primary,Online
+22,01/28/2023,$5139.89,Passive,Bank Transfer
+23,04/23/2023,$1150.98,Primary,Online
+24,10/27/2023,$5649.72,Secondary,Bank Transfer
+25,09/03/2022,$6040.21,Passive,Bank Transfer
+26,07/24/2023,$1172.21,Primary,Online
+27,09/04/2022,$5718.18,Primary,Online
+28,03/15/2023,$4740.93,Secondary,Online
+29,06/29/2023,$4294.30,Passive,Bank Transfer
+30,04/26/2023,$7662.94,Passive,Bank Transfer
+31,12/25/2023,$2280.25,Secondary,Bank Transfer
+32,10/27/2022,$8113.69,Secondary,Bank Transfer
+33,05/09/2022,$5166.31,Passive,Bank Transfer
+34,02/04/2023,$8732.70,Passive,Bank Transfer
+35,09/14/2023,$2921.88,Passive,Bank Transfer
+36,12/16/2023,$7044.42,Passive,Bank Transfer
+37,05/01/2023,$1870.26,Primary,Online
+38,05/11/2023,$8855.89,Passive,Online
+39,05/18/2022,$8306.24,Passive,Online
+40,06/25/2022,$9733.84,Passive,Bank Transfer
+41,03/17/2023,$3344.06,Passive,Online
+42,04/05/2022,$933.93,Primary,Bank Transfer
+43,02/03/2023,$1151.36,Primary,Bank Transfer
+44,09/06/2022,$8442.45,Secondary,Bank Transfer
+45,02/24/2023,$2790.11,Primary,Online
+46,11/18/2022,$6329.16,Primary,Online
+47,05/04/2022,$2314.77,Secondary,Online
+48,04/30/2023,$3344.96,Primary,Online
+49,07/24/2022,$4811.65,Passive,Online
+50,05/10/2022,$8351.92,Passive,Bank Transfer
+51,05/04/2023,$5723.65,Passive,Online
+52,11/01/2022,$6947.69,Primary,Bank Transfer
+53,09/06/2023,$6141.69,Secondary,Bank Transfer
+54,07/05/2023,$2395.26,Secondary,Online
+55,01/23/2022,$9686.70,Secondary,Online
+56,07/14/2023,$1355.30,Primary,Online
+57,12/10/2023,$9088.73,Primary,Bank Transfer
+58,10/10/2022,$335.06,Passive,Online
+59,05/29/2023,$8274.11,Passive,Online
+60,01/13/2023,$2316.47,Passive,Online
+61,10/24/2023,$6810.23,Passive,Bank Transfer
+62,02/02/2023,$4180.14,Passive,Bank Transfer
+63,08/06/2023,$870.71,Passive,Bank Transfer
+64,06/29/2022,$1433.27,Secondary,Bank Transfer
+65,09/04/2022,$9078.54,Secondary,Bank Transfer
+66,08/31/2023,$7288.42,Secondary,Bank Transfer
+67,02/13/2022,$7371.96,Secondary,Bank Transfer
+68,10/17/2022,$1795.98,Passive,Bank Transfer
+69,01/01/2022,$6279.39,Primary,Bank Transfer
+70,05/31/2022,$7089.00,Passive,Online
+71,04/22/2023,$9218.06,Passive,Bank Transfer
+72,09/03/2023,$7501.74,Secondary,Bank Transfer
+73,10/30/2022,$8238.52,Secondary,Bank Transfer
+74,02/28/2022,$7630.13,Passive,Bank Transfer
+75,05/20/2023,$8852.50,Secondary,Bank Transfer
+76,01/27/2023,$8549.72,Secondary,Bank Transfer
+77,06/29/2022,$7830.03,Primary,Bank Transfer
+78,10/15/2022,$8392.44,Passive,Bank Transfer
+79,08/06/2022,$8086.13,Secondary,Online
+80,03/12/2022,$4409.84,Secondary,Bank Transfer
+81,02/10/2023,$6623.43,Secondary,Online
+82,05/24/2023,$8091.54,Passive,Bank Transfer
+83,09/23/2022,$3914.13,Primary,Bank Transfer
+84,02/22/2023,$9065.14,Primary,Bank Transfer
+85,09/25/2023,$6229.61,Primary,Online
+86,11/05/2022,$8600.66,Secondary,Online
+87,01/07/2023,$5639.82,Primary,Bank Transfer
+88,05/01/2023,$8497.21,Secondary,Online
+89,02/28/2023,$3531.55,Secondary,Online
+90,01/23/2022,$7456.93,Secondary,Online
+91,05/24/2022,$4942.34,Passive,Bank Transfer
+92,08/05/2022,$8633.46,Primary,Bank Transfer
+93,12/27/2022,$9784.17,Passive,Bank Transfer
+94,05/09/2022,$9604.98,Secondary,Online
+95,11/30/2023,$4387.12,Primary,Bank Transfer
+96,01/12/2023,$9347.52,Secondary,Online
+97,12/03/2022,$2459.02,Passive,Bank Transfer
+98,08/29/2023,$2180.40,Secondary,Bank Transfer
+99,07/12/2023,$8520.71,Primary,Bank Transfer
+100,05/28/2023,$3767.05,Secondary,Online
+101,10/19/2023,$4660.90,Secondary,Online
+102,01/17/2023,$4887.03,Passive,Bank Transfer
+103,04/08/2022,$8002.30,Primary,Online
+104,04/08/2023,$9315.82,Passive,Online
+105,05/24/2023,$9916.11,Primary,Online
+106,09/07/2022,$5199.84,Primary,Online
+107,01/31/2022,$9930.38,Passive,Online
+108,06/13/2022,$3304.61,Passive,Online
+109,10/07/2022,$8268.95,Secondary,Online
+110,02/11/2023,$5307.58,Primary,Bank Transfer
+111,01/21/2022,$1651.22,Primary,Online
+112,03/30/2022,$244.34,Secondary,Online
+113,08/12/2023,$446.52,Secondary,Online
+114,02/10/2023,$9355.16,Passive,Bank Transfer
+115,04/23/2023,$1968.80,Passive,Online
+116,06/10/2023,$8031.29,Primary,Online
+117,10/09/2022,$5195.06,Primary,Bank Transfer
+118,01/01/2023,$4789.00,Secondary,Bank Transfer
+119,09/05/2022,$9612.20,Primary,Online
+120,07/24/2023,$6589.17,Primary,Bank Transfer
+121,05/25/2022,$2856.58,Primary,Bank Transfer
+122,01/29/2023,$5245.98,Primary,Online
+123,06/12/2022,$9242.82,Secondary,Online
+124,07/16/2023,$6349.09,Primary,Bank Transfer
+125,02/10/2022,$3344.76,Passive,Online
+126,02/17/2023,$1268.83,Primary,Bank Transfer
+127,02/19/2022,$3909.98,Primary,Online
+128,09/29/2023,$5870.29,Secondary,Online
+129,07/02/2022,$6773.19,Passive,Online
+130,10/25/2023,$6601.12,Primary,Online
+131,07/31/2023,$4303.46,Primary,Online
+132,08/21/2022,$5303.60,Secondary,Bank Transfer
+133,01/23/2022,$359.73,Primary,Online
+134,12/04/2022,$7219.96,Primary,Bank Transfer
+135,12/19/2023,$8478.25,Primary,Online
+136,03/31/2022,$6097.71,Passive,Online
+137,11/25/2022,$9724.62,Secondary,Online
+138,01/01/2023,$5375.17,Primary,Bank Transfer
+139,01/05/2023,$4434.96,Primary,Bank Transfer
+140,03/23/2022,$9559.20,Passive,Online
+141,12/24/2023,$7261.18,Passive,Online
+142,12/03/2023,$3968.80,Primary,Online
+143,06/13/2023,$4192.06,Passive,Bank Transfer
+144,12/17/2022,$9273.26,Primary,Bank Transfer
+145,10/07/2022,$2627.73,Passive,Online
+146,02/02/2022,$8810.53,Primary,Bank Transfer
+147,09/01/2023,$2136.16,Passive,Online
+148,04/01/2022,$6092.89,Secondary,Online
+149,09/10/2022,$3396.41,Primary,Online
+150,01/16/2022,$7610.98,Primary,Online
+151,08/16/2023,$7558.01,Passive,Bank Transfer
+152,03/12/2023,$1599.79,Secondary,Online
+153,10/08/2022,$8642.81,Secondary,Online
+154,07/05/2023,$9119.69,Secondary,Online
+155,06/05/2022,$2059.44,Passive,Bank Transfer
+156,08/18/2023,$3191.69,Passive,Online
+157,04/24/2023,$3932.33,Primary,Online
+158,05/16/2022,$5587.60,Primary,Bank Transfer
+159,03/30/2022,$5825.75,Passive,Online
+160,04/28/2023,$1035.33,Passive,Bank Transfer
+161,07/25/2023,$6897.81,Primary,Bank Transfer
+162,06/14/2023,$4332.57,Passive,Bank Transfer
+163,01/13/2023,$9597.07,Secondary,Bank Transfer
+164,04/04/2023,$3312.49,Passive,Online
+165,08/05/2023,$2809.25,Primary,Online
+166,08/26/2022,$4774.37,Passive,Online
+167,10/05/2023,$6692.34,Secondary,Online
+168,09/27/2023,$1943.62,Passive,Online
+169,12/29/2023,$7624.86,Primary,Bank Transfer
+170,05/03/2022,$5348.18,Passive,Online
+171,09/17/2023,$2958.93,Secondary,Bank Transfer
+172,12/09/2022,$5467.25,Secondary,Bank Transfer
+173,02/20/2023,$4557.79,Passive,Online
+174,06/09/2023,$1926.96,Passive,Bank Transfer
+175,01/13/2023,$8584.24,Passive,Bank Transfer
+176,06/19/2023,$8891.75,Secondary,Online
+177,05/03/2023,$5769.74,Primary,Online
+178,11/04/2023,$911.21,Primary,Bank Transfer
+179,04/09/2023,$6876.86,Primary,Online
+180,07/10/2023,$6522.91,Passive,Online
+181,04/14/2022,$7602.05,Primary,Online
+182,06/09/2022,$3138.22,Passive,Online
+183,10/29/2022,$9201.28,Passive,Online
+184,08/06/2023,$3237.83,Passive,Online
+185,01/02/2023,$9243.90,Secondary,Online
+186,05/06/2023,$913.00,Passive,Online
+187,03/29/2022,$9271.10,Secondary,Online
+188,11/20/2023,$889.41,Passive,Bank Transfer
+189,05/26/2022,$4319.82,Secondary,Bank Transfer
+190,04/25/2022,$6932.76,Passive,Online
+191,02/19/2022,$2507.07,Primary,Bank Transfer
+192,02/11/2022,$3757.92,Secondary,Bank Transfer
+193,10/16/2023,$9201.18,Primary,Online
+194,11/16/2022,$7723.04,Primary,Bank Transfer
+195,10/23/2022,$3800.00,Passive,Online
+196,04/09/2023,$306.79,Passive,Online
+197,01/01/2022,$5150.65,Passive,Online
+198,11/12/2023,$6645.92,Primary,Online
+199,09/02/2022,$6480.02,Secondary,Bank Transfer
+200,07/07/2023,$3536.84,Passive,Online
+201,07/27/2022,$2350.01,Passive,Online
+202,09/18/2023,$8203.32,Secondary,Online
+203,02/07/2023,$1969.23,Primary,Online
+204,04/13/2023,$698.76,Passive,Online
+205,09/03/2022,$2368.77,Passive,Online
+206,08/06/2023,$8219.73,Secondary,Online
+207,09/25/2022,$6099.50,Primary,Online
+208,01/08/2023,$6950.65,Secondary,Online
+209,10/12/2023,$2505.49,Secondary,Online
+210,10/28/2023,$7380.09,Passive,Bank Transfer
+211,01/13/2022,$5932.85,Secondary,Bank Transfer
+212,04/19/2022,$7726.53,Primary,Online
+213,03/12/2023,$4281.58,Primary,Online
+214,02/12/2023,$9630.95,Passive,Online
+215,11/06/2022,$7134.43,Secondary,Online
+216,05/24/2022,$6078.98,Primary,Bank Transfer
+217,06/17/2023,$5620.70,Secondary,Bank Transfer
+218,11/03/2023,$3555.90,Secondary,Bank Transfer
+219,09/26/2022,$8104.54,Secondary,Online
+220,10/21/2023,$9106.03,Passive,Bank Transfer
+221,01/08/2023,$4963.96,Primary,Bank Transfer
+222,10/19/2023,$7164.02,Primary,Online
+223,04/12/2023,$6818.98,Passive,Online
+224,02/15/2022,$5474.61,Secondary,Online
+225,11/30/2022,$5698.02,Secondary,Online
+226,02/17/2022,$1180.55,Secondary,Bank Transfer
+227,09/14/2023,$9826.36,Primary,Online
+228,01/23/2023,$8709.73,Passive,Online
+229,04/19/2022,$7659.85,Secondary,Bank Transfer
+230,09/25/2023,$4856.68,Passive,Bank Transfer
+231,06/01/2022,$8414.18,Secondary,Bank Transfer
+232,12/18/2022,$3299.37,Primary,Online
+233,06/05/2022,$8352.21,Secondary,Bank Transfer
+234,05/02/2023,$7504.76,Primary,Bank Transfer
+235,01/08/2022,$2036.33,Secondary,Online
+236,01/28/2023,$2933.42,Secondary,Bank Transfer
+237,10/13/2022,$4621.13,Secondary,Bank Transfer
+238,02/07/2023,$7822.78,Secondary,Bank Transfer
+239,09/11/2023,$8039.54,Primary,Bank Transfer
+240,04/19/2023,$3292.52,Secondary,Bank Transfer
+241,08/15/2022,$1620.23,Primary,Online
+242,07/26/2023,$5918.93,Passive,Online
+243,06/08/2022,$4843.18,Secondary,Online
+244,08/29/2022,$63.45,Secondary,Online
+245,11/27/2022,$1674.46,Passive,Bank Transfer
+246,02/22/2023,$3110.97,Secondary,Online
+247,09/13/2022,$3380.41,Passive,Bank Transfer
+248,07/24/2023,$4980.80,Primary,Online
+249,07/31/2022,$7713.57,Passive,Bank Transfer
+250,04/12/2022,$3364.63,Passive,Online
+251,01/22/2023,$7545.50,Secondary,Bank Transfer
+252,05/27/2023,$9337.48,Passive,Online
+253,03/17/2023,$634.50,Primary,Bank Transfer
+254,01/02/2022,$4072.18,Secondary,Online
+255,01/22/2023,$4376.99,Primary,Bank Transfer
+256,02/20/2022,$182.64,Secondary,Online
+257,10/05/2022,$5390.19,Passive,Online
+258,10/30/2023,$6733.72,Secondary,Bank Transfer
+259,09/09/2022,$5871.18,Secondary,Online
+260,07/16/2022,$2879.10,Passive,Bank Transfer
+261,10/11/2022,$4537.21,Primary,Online
+262,06/25/2022,$6372.18,Passive,Bank Transfer
+263,06/18/2022,$7275.31,Passive,Online
+264,09/12/2022,$423.79,Passive,Online
+265,04/05/2022,$7313.01,Passive,Bank Transfer
+266,05/23/2023,$8238.13,Passive,Bank Transfer
+267,02/17/2023,$2138.28,Passive,Online
+268,07/29/2022,$9393.61,Primary,Bank Transfer
+269,06/14/2022,$8350.64,Passive,Online
+270,03/17/2022,$8441.59,Primary,Online
+271,10/25/2023,$8422.19,Secondary,Bank Transfer
+272,12/04/2023,$8143.35,Passive,Online
+273,12/26/2022,$1903.66,Secondary,Bank Transfer
+274,08/15/2023,$1512.58,Primary,Bank Transfer
+275,02/19/2023,$4229.15,Passive,Online
+276,05/26/2023,$6906.66,Secondary,Online
+277,05/22/2023,$484.28,Passive,Bank Transfer
+278,07/27/2022,$2133.14,Primary,Online
+279,12/27/2022,$5660.35,Passive,Online
+280,12/09/2023,$6288.94,Primary,Bank Transfer
+281,08/10/2022,$2515.31,Secondary,Bank Transfer
+282,06/26/2022,$1346.08,Primary,Online
+283,10/04/2022,$6574.61,Passive,Bank Transfer
+284,10/24/2023,$205.65,Passive,Bank Transfer
+285,11/04/2022,$9712.30,Primary,Online
+286,11/18/2022,$3928.36,Passive,Bank Transfer
+287,03/07/2023,$4552.05,Passive,Bank Transfer
+288,09/09/2023,$6545.50,Passive,Online
+289,05/19/2022,$8215.35,Passive,Bank Transfer
+290,12/08/2023,$1490.80,Passive,Online
+291,03/20/2023,$8343.12,Primary,Bank Transfer
+292,06/04/2022,$3995.78,Passive,Bank Transfer
+293,02/20/2023,$3086.41,Secondary,Online
+294,08/13/2023,$2860.53,Passive,Online
+295,10/21/2023,$4377.54,Secondary,Online
+296,01/09/2022,$3870.95,Primary,Bank Transfer
+297,11/07/2023,$2229.97,Passive,Online
+298,03/06/2022,$8900.44,Passive,Bank Transfer
+299,08/23/2023,$3796.82,Secondary,Online
+300,02/06/2023,$432.57,Passive,Bank Transfer
+301,12/20/2023,$8347.23,Passive,Online
+302,09/01/2023,$5782.04,Passive,Online
+303,03/16/2023,$3613.03,Secondary,Bank Transfer
+304,10/04/2022,$2884.95,Primary,Online
+305,11/11/2022,$1706.34,Primary,Online
+306,10/15/2022,$6116.22,Secondary,Online
+307,08/24/2022,$4391.01,Passive,Bank Transfer
+308,09/25/2023,$8977.92,Passive,Online
+309,01/05/2023,$1227.54,Primary,Online
+310,12/30/2022,$982.80,Secondary,Online
+311,05/31/2022,$8802.36,Secondary,Bank Transfer
+312,03/20/2023,$5952.73,Primary,Online
+313,08/13/2022,$7022.13,Primary,Online
+314,10/11/2022,$3173.11,Primary,Online
+315,05/18/2023,$3871.26,Secondary,Bank Transfer
+316,11/22/2022,$904.49,Primary,Online
+317,08/29/2023,$9570.28,Primary,Bank Transfer
+318,06/04/2023,$7880.26,Passive,Bank Transfer
+319,04/07/2022,$7149.57,Primary,Online
+320,06/10/2022,$8763.60,Primary,Online
+321,01/14/2023,$8318.98,Primary,Bank Transfer
+322,12/18/2023,$9659.15,Passive,Bank Transfer
+323,10/28/2022,$8181.35,Secondary,Online
+324,12/10/2022,$7231.15,Primary,Online
+325,01/29/2022,$7925.26,Primary,Bank Transfer
+326,12/20/2022,$2738.64,Primary,Bank Transfer
+327,10/06/2023,$1996.52,Primary,Bank Transfer
+328,10/18/2023,$6456.06,Passive,Online
+329,03/08/2022,$801.59,Secondary,Online
+330,05/29/2023,$9744.67,Secondary,Bank Transfer
+331,10/31/2023,$6879.30,Secondary,Online
+332,01/03/2022,$1999.05,Passive,Bank Transfer
+333,10/17/2023,$4394.46,Primary,Online
+334,11/06/2023,$1537.82,Primary,Online
+335,07/24/2022,$3796.17,Primary,Online
+336,07/05/2022,$7868.39,Passive,Bank Transfer
+337,04/19/2023,$51.63,Passive,Bank Transfer
+338,12/14/2023,$9344.63,Secondary,Bank Transfer
+339,03/12/2023,$6078.62,Passive,Online
+340,02/24/2023,$1504.79,Secondary,Bank Transfer
+341,08/11/2023,$7659.59,Primary,Bank Transfer
+342,04/04/2022,$9985.39,Secondary,Bank Transfer
+343,02/13/2022,$5922.23,Secondary,Bank Transfer
+344,03/10/2022,$2924.83,Secondary,Online
+345,02/03/2023,$7701.81,Primary,Bank Transfer
+346,08/03/2022,$2857.27,Secondary,Online
+347,12/13/2022,$5537.91,Secondary,Online
+348,02/19/2023,$4389.89,Secondary,Bank Transfer
+349,12/12/2022,$6317.11,Secondary,Online
+350,03/25/2023,$254.88,Secondary,Bank Transfer
+351,09/25/2023,$4995.81,Passive,Bank Transfer
+352,07/21/2023,$2403.65,Primary,Online
+353,10/12/2022,$9692.72,Secondary,Online
+354,05/21/2023,$2267.89,Passive,Online
+355,01/26/2023,$8919.05,Primary,Bank Transfer
+356,05/08/2023,$6107.62,Passive,Online
+357,02/22/2023,$2492.81,Primary,Bank Transfer
+358,02/02/2022,$3586.03,Primary,Bank Transfer
+359,04/06/2022,$1080.81,Primary,Bank Transfer
+360,10/07/2023,$7694.98,Primary,Online
+361,11/03/2023,$8862.66,Primary,Online
+362,10/22/2022,$6805.82,Passive,Online
+363,03/31/2022,$2719.60,Passive,Online
+364,06/12/2023,$9565.02,Passive,Bank Transfer
+365,05/31/2022,$5902.75,Primary,Bank Transfer
+366,05/02/2023,$8645.85,Primary,Online
+367,02/13/2022,$217.27,Passive,Online
+368,10/05/2023,$61.05,Passive,Online
+369,01/03/2023,$6256.86,Secondary,Online
+370,08/31/2023,$7884.77,Passive,Online
+371,06/06/2023,$3462.34,Secondary,Online
+372,02/17/2022,$5250.53,Primary,Bank Transfer
+373,10/16/2022,$4061.68,Secondary,Online
+374,08/23/2022,$9266.27,Primary,Online
+375,09/23/2022,$4354.54,Primary,Bank Transfer
+376,04/11/2022,$6810.83,Primary,Bank Transfer
+377,04/09/2023,$2049.71,Primary,Bank Transfer
+378,03/20/2023,$8633.30,Passive,Bank Transfer
+379,05/13/2022,$5550.53,Secondary,Online
+380,03/12/2023,$1123.06,Passive,Bank Transfer
+381,01/27/2022,$3733.00,Primary,Online
+382,09/12/2023,$7793.91,Passive,Bank Transfer
+383,03/29/2023,$5713.29,Passive,Online
+384,12/20/2023,$6586.21,Primary,Online
+385,10/19/2022,$1949.23,Passive,Online
+386,09/17/2022,$5020.22,Passive,Online
+387,04/08/2022,$6121.54,Passive,Online
+388,05/13/2022,$3875.53,Primary,Bank Transfer
+389,05/29/2022,$9364.89,Primary,Online
+390,09/13/2022,$5450.11,Passive,Bank Transfer
+391,09/26/2022,$8340.91,Passive,Bank Transfer
+392,05/05/2022,$694.08,Passive,Bank Transfer
+393,11/28/2022,$2481.46,Secondary,Online
+394,02/07/2023,$4122.09,Primary,Bank Transfer
+395,03/10/2023,$169.21,Passive,Online
+396,12/18/2022,$301.24,Passive,Bank Transfer
+397,09/22/2022,$130.94,Passive,Online
+398,06/13/2023,$4002.51,Secondary,Online
+399,04/21/2023,$9819.75,Secondary,Online
+400,07/21/2023,$2176.67,Secondary,Bank Transfer
+401,05/02/2022,$8343.74,Passive,Online
+402,02/03/2023,$2754.10,Primary,Online
+403,10/12/2022,$5679.86,Primary,Online
+404,09/19/2022,$2288.95,Primary,Online
+405,06/23/2023,$5822.38,Primary,Online
+406,05/16/2023,$3134.63,Primary,Bank Transfer
+407,11/19/2022,$8246.62,Secondary,Online
+408,09/24/2023,$8763.51,Primary,Bank Transfer
+409,06/07/2023,$6789.22,Secondary,Bank Transfer
+410,07/27/2022,$3283.78,Secondary,Bank Transfer
+411,11/18/2023,$976.40,Passive,Online
+412,08/26/2022,$5782.77,Primary,Online
+413,01/16/2022,$9504.17,Secondary,Bank Transfer
+414,07/20/2023,$5706.42,Primary,Bank Transfer
+415,09/17/2022,$5215.30,Passive,Bank Transfer
+416,03/14/2022,$2596.92,Secondary,Online
+417,02/03/2023,$2125.07,Secondary,Online
+418,10/09/2023,$1956.23,Passive,Bank Transfer
+419,10/02/2023,$2439.12,Primary,Bank Transfer
+420,10/21/2022,$663.28,Primary,Online
+421,11/29/2022,$2000.07,Secondary,Bank Transfer
+422,02/06/2022,$2635.45,Secondary,Online
+423,10/01/2022,$7597.40,Secondary,Online
+424,01/04/2022,$2468.99,Passive,Bank Transfer
+425,04/29/2022,$457.36,Primary,Online
+426,02/11/2023,$2799.07,Primary,Bank Transfer
+427,01/19/2023,$8109.97,Secondary,Online
+428,07/24/2023,$3412.35,Secondary,Online
+429,12/25/2022,$213.85,Passive,Online
+430,01/01/2022,$1507.27,Primary,Online
+431,06/29/2022,$4324.58,Primary,Online
+432,05/02/2022,$1519.48,Secondary,Online
+433,12/25/2023,$5744.07,Primary,Bank Transfer
+434,06/25/2023,$8859.25,Passive,Bank Transfer
+435,12/21/2023,$1917.89,Primary,Online
+436,03/24/2022,$96.15,Passive,Online
+437,03/18/2022,$9049.47,Secondary,Bank Transfer
+438,02/04/2022,$9595.31,Passive,Bank Transfer
+439,06/26/2022,$7380.27,Passive,Bank Transfer
+440,06/11/2023,$8685.46,Secondary,Bank Transfer
+441,10/08/2023,$6184.12,Passive,Bank Transfer
+442,08/13/2022,$393.99,Primary,Bank Transfer
+443,05/13/2022,$6276.07,Passive,Bank Transfer
+444,09/15/2022,$965.87,Passive,Online
+445,06/04/2022,$3481.12,Primary,Bank Transfer
+446,04/17/2022,$2144.92,Passive,Online
+447,11/16/2022,$8736.15,Primary,Online
+448,11/05/2023,$1648.49,Secondary,Online
+449,05/29/2022,$8898.46,Primary,Bank Transfer
+450,06/13/2023,$4287.27,Secondary,Bank Transfer
+451,11/10/2022,$5651.34,Passive,Bank Transfer
+452,03/21/2022,$1222.93,Passive,Bank Transfer
+453,05/13/2022,$2139.26,Primary,Bank Transfer
+454,10/27/2023,$4396.76,Secondary,Bank Transfer
+455,06/27/2023,$8382.84,Passive,Bank Transfer
+456,08/24/2023,$808.35,Passive,Online
+457,01/21/2022,$5567.23,Primary,Online
+458,07/04/2022,$8048.74,Secondary,Online
+459,09/14/2023,$5018.82,Primary,Bank Transfer
+460,12/15/2023,$2474.48,Passive,Bank Transfer
+461,12/17/2023,$1661.01,Primary,Bank Transfer
+462,02/02/2023,$2246.20,Primary,Online
+463,01/11/2023,$5849.94,Primary,Bank Transfer
+464,05/25/2023,$1073.85,Primary,Online
+465,06/08/2023,$118.42,Secondary,Online
+466,10/24/2023,$6535.98,Secondary,Bank Transfer
+467,11/12/2023,$872.56,Primary,Bank Transfer
+468,08/22/2023,$387.51,Secondary,Online
+469,10/12/2023,$4114.28,Primary,Bank Transfer
+470,11/01/2022,$7122.83,Primary,Online
+471,08/18/2023,$1735.51,Passive,Online
+472,02/20/2022,$2472.04,Secondary,Online
+473,07/16/2022,$1466.73,Passive,Bank Transfer
+474,04/23/2023,$5850.05,Secondary,Online
+475,03/30/2022,$7177.27,Primary,Online
+476,09/29/2023,$6106.12,Passive,Bank Transfer
+477,10/17/2023,$4800.38,Primary,Bank Transfer
+478,08/16/2022,$1834.30,Primary,Online
+479,09/28/2022,$8054.86,Passive,Bank Transfer
+480,12/11/2022,$7121.84,Passive,Online
+481,02/04/2023,$1750.96,Secondary,Bank Transfer
+482,03/12/2023,$4614.57,Secondary,Bank Transfer
+483,03/07/2022,$6815.70,Primary,Online
+484,07/08/2022,$7048.50,Secondary,Bank Transfer
+485,04/16/2023,$775.06,Passive,Online
+486,02/10/2022,$8374.86,Primary,Bank Transfer
+487,10/16/2022,$2519.53,Secondary,Bank Transfer
+488,10/30/2022,$1983.78,Primary,Online
+489,12/21/2022,$3992.16,Passive,Bank Transfer
+490,07/12/2022,$7716.09,Primary,Bank Transfer
+491,03/05/2023,$5982.59,Secondary,Bank Transfer
+492,04/08/2023,$816.22,Primary,Online
+493,02/23/2023,$3218.70,Passive,Bank Transfer
+494,11/17/2023,$2325.70,Passive,Online
+495,04/05/2022,$6897.69,Secondary,Online
+496,03/20/2022,$9853.17,Secondary,Bank Transfer
+497,06/28/2022,$2166.86,Primary,Bank Transfer
+498,09/04/2022,$4888.09,Primary,Bank Transfer
+499,04/05/2023,$8650.65,Secondary,Online
+500,07/30/2022,$3094.04,Passive,Bank Transfer
+501,10/05/2023,$2286.87,Passive,Bank Transfer
+502,04/27/2023,$1479.14,Secondary,Online
+503,09/28/2022,$675.01,Primary,Bank Transfer
+504,04/22/2023,$4510.65,Primary,Bank Transfer
+505,05/01/2023,$7633.16,Primary,Online
+506,05/22/2023,$3991.55,Primary,Bank Transfer
+507,02/27/2023,$1409.09,Primary,Bank Transfer
+508,11/01/2023,$9442.36,Primary,Online
+509,07/12/2023,$5980.84,Passive,Online
+510,02/21/2022,$1234.89,Primary,Online
+511,09/22/2023,$2697.82,Passive,Online
+512,10/28/2022,$5352.20,Secondary,Bank Transfer
+513,02/02/2022,$5196.00,Primary,Online
+514,02/13/2022,$4535.34,Passive,Bank Transfer
+515,02/24/2022,$687.67,Passive,Online
+516,07/13/2022,$1138.65,Passive,Bank Transfer
+517,03/05/2022,$6265.70,Primary,Online
+518,09/28/2023,$2265.23,Passive,Bank Transfer
+519,11/12/2023,$5983.87,Primary,Bank Transfer
+520,10/18/2023,$1377.16,Passive,Bank Transfer
+521,04/27/2022,$1712.16,Passive,Online
+522,03/16/2022,$7066.82,Primary,Bank Transfer
+523,07/04/2023,$579.26,Passive,Online
+524,07/04/2023,$3956.10,Passive,Online
+525,08/21/2022,$5196.31,Secondary,Online
+526,05/28/2023,$7388.14,Secondary,Online
+527,02/09/2023,$4814.99,Passive,Online
+528,12/09/2023,$2481.93,Passive,Online
+529,02/03/2023,$9696.02,Secondary,Bank Transfer
+530,01/28/2023,$1017.36,Primary,Bank Transfer
+531,11/05/2022,$9675.70,Primary,Online
+532,04/20/2023,$7465.85,Passive,Online
+533,07/08/2023,$2625.23,Secondary,Bank Transfer
+534,06/10/2023,$1298.17,Secondary,Online
+535,06/29/2022,$5025.54,Passive,Bank Transfer
+536,12/07/2023,$5633.06,Secondary,Online
+537,11/16/2022,$6688.48,Secondary,Online
+538,11/24/2023,$3669.30,Secondary,Online
+539,11/21/2022,$4362.90,Secondary,Bank Transfer
+540,10/06/2023,$7061.45,Secondary,Bank Transfer
+541,08/21/2022,$7839.88,Secondary,Bank Transfer
+542,01/28/2023,$6530.26,Passive,Bank Transfer
+543,10/23/2023,$1903.20,Passive,Bank Transfer
+544,04/11/2023,$5503.71,Secondary,Bank Transfer
+545,04/20/2022,$4592.02,Passive,Online
+546,12/01/2022,$1872.28,Primary,Bank Transfer
+547,11/28/2022,$3701.68,Passive,Online
+548,08/02/2022,$2420.61,Passive,Online
+549,11/10/2023,$8436.72,Passive,Bank Transfer
+550,09/09/2022,$442.00,Secondary,Bank Transfer
+551,08/22/2023,$7033.24,Passive,Bank Transfer
+552,03/31/2023,$7108.02,Passive,Online
+553,10/28/2023,$6086.85,Secondary,Online
+554,04/03/2023,$9268.95,Passive,Bank Transfer
+555,12/25/2023,$2961.52,Secondary,Bank Transfer
+556,12/27/2023,$7789.55,Passive,Online
+557,07/31/2022,$7799.02,Passive,Online
+558,08/17/2023,$4462.67,Secondary,Online
+559,04/23/2023,$7538.81,Passive,Bank Transfer
+560,09/27/2022,$4486.45,Passive,Online
+561,02/16/2022,$3452.45,Passive,Online
+562,09/09/2023,$1587.77,Passive,Online
+563,03/27/2022,$2620.10,Passive,Online
+564,12/10/2022,$9480.79,Secondary,Online
+565,10/27/2023,$7206.00,Primary,Online
+566,02/08/2022,$5232.77,Passive,Bank Transfer
+567,09/09/2023,$5363.34,Passive,Online
+568,12/29/2023,$1618.82,Primary,Online
+569,08/16/2022,$3798.58,Primary,Online
+570,08/08/2023,$8190.69,Secondary,Bank Transfer
+571,08/18/2023,$1923.66,Passive,Online
+572,12/20/2023,$6116.31,Primary,Bank Transfer
+573,05/09/2022,$4214.55,Secondary,Online
+574,05/02/2023,$3618.54,Primary,Online
+575,05/10/2022,$7211.74,Secondary,Bank Transfer
+576,10/28/2023,$8059.54,Passive,Bank Transfer
+577,12/10/2022,$4182.11,Secondary,Online
+578,11/25/2022,$8185.01,Passive,Bank Transfer
+579,03/25/2022,$3714.18,Passive,Online
+580,04/29/2023,$2784.18,Secondary,Online
+581,09/06/2023,$3945.09,Secondary,Online
+582,01/19/2023,$5178.03,Primary,Online
+583,05/08/2022,$664.90,Passive,Online
+584,02/08/2022,$3947.65,Primary,Online
+585,03/18/2023,$2929.12,Primary,Bank Transfer
+586,03/14/2022,$4754.10,Primary,Bank Transfer
+587,05/14/2023,$4307.53,Passive,Online
+588,07/16/2023,$6752.72,Primary,Online
+589,11/22/2022,$6893.36,Passive,Online
+590,01/31/2023,$4878.88,Secondary,Online
+591,07/12/2022,$2406.58,Primary,Bank Transfer
+592,06/17/2022,$6112.60,Secondary,Online
+593,03/18/2023,$2426.95,Secondary,Bank Transfer
+594,03/21/2022,$5018.22,Passive,Online
+595,08/27/2023,$4952.45,Secondary,Bank Transfer
+596,02/13/2022,$1426.11,Secondary,Bank Transfer
+597,06/21/2023,$3115.92,Primary,Online
+598,06/10/2022,$2558.16,Primary,Bank Transfer
+599,09/29/2022,$5859.40,Passive,Bank Transfer
+600,04/17/2023,$842.28,Passive,Online
+601,08/27/2022,$2988.82,Passive,Online
+602,01/22/2023,$4666.22,Secondary,Online
+603,12/20/2023,$6983.47,Passive,Online
+604,07/11/2022,$9310.56,Secondary,Online
+605,01/18/2022,$9623.61,Passive,Bank Transfer
+606,10/01/2023,$7372.56,Passive,Bank Transfer
+607,05/02/2023,$3899.63,Secondary,Online
+608,05/29/2023,$1738.64,Secondary,Online
+609,08/25/2022,$7464.14,Passive,Online
+610,08/04/2022,$1197.72,Passive,Online
+611,04/01/2023,$8051.37,Primary,Online
+612,08/14/2022,$2613.41,Secondary,Online
+613,09/09/2022,$5607.25,Primary,Bank Transfer
+614,06/19/2022,$5622.57,Primary,Bank Transfer
+615,08/25/2022,$8498.69,Primary,Bank Transfer
+616,10/22/2022,$5458.34,Passive,Online
+617,05/22/2023,$3214.58,Passive,Online
+618,09/29/2023,$4031.62,Primary,Online
+619,05/23/2023,$8151.85,Secondary,Online
+620,03/15/2022,$9786.01,Secondary,Online
+621,04/16/2023,$5505.01,Passive,Online
+622,04/01/2022,$9066.46,Primary,Bank Transfer
+623,05/29/2023,$3337.49,Passive,Online
+624,09/14/2023,$974.51,Passive,Bank Transfer
+625,08/19/2022,$5595.41,Passive,Bank Transfer
+626,11/30/2023,$4450.24,Secondary,Bank Transfer
+627,01/14/2023,$8812.08,Primary,Bank Transfer
+628,04/30/2023,$3187.00,Passive,Bank Transfer
+629,12/13/2022,$6880.07,Primary,Online
+630,09/05/2023,$8836.08,Passive,Bank Transfer
+631,02/09/2023,$8415.53,Passive,Online
+632,01/23/2023,$7889.13,Passive,Online
+633,04/23/2023,$27.45,Primary,Online
+634,08/18/2022,$1721.03,Secondary,Online
+635,01/22/2022,$7374.54,Secondary,Bank Transfer
+636,11/28/2022,$6112.68,Secondary,Bank Transfer
+637,07/22/2022,$2309.03,Passive,Bank Transfer
+638,09/07/2022,$3223.62,Secondary,Bank Transfer
+639,07/24/2022,$9605.19,Passive,Bank Transfer
+640,06/07/2022,$8592.93,Passive,Bank Transfer
+641,03/03/2023,$9598.90,Primary,Bank Transfer
+642,09/08/2022,$4024.92,Passive,Online
+643,10/03/2022,$5636.73,Secondary,Bank Transfer
+644,01/11/2022,$403.72,Secondary,Bank Transfer
+645,07/23/2023,$4668.55,Passive,Online
+646,06/16/2023,$5268.50,Secondary,Online
+647,07/13/2022,$5215.02,Passive,Online
+648,10/31/2023,$382.98,Secondary,Bank Transfer
+649,08/27/2023,$221.00,Passive,Bank Transfer
+650,06/04/2023,$8857.43,Secondary,Online
+651,04/09/2023,$7353.91,Primary,Online
+652,02/09/2022,$4115.23,Primary,Online
+653,05/15/2022,$6441.32,Primary,Bank Transfer
+654,10/25/2022,$4713.07,Primary,Online
+655,10/15/2023,$4860.83,Secondary,Online
+656,09/09/2022,$1091.06,Secondary,Bank Transfer
+657,08/07/2023,$9531.50,Passive,Bank Transfer
+658,01/04/2022,$5025.13,Primary,Online
+659,02/13/2023,$2747.44,Primary,Bank Transfer
+660,05/12/2023,$3780.73,Primary,Online
+661,12/23/2023,$3618.54,Passive,Bank Transfer
+662,08/11/2022,$6494.32,Primary,Online
+663,06/09/2022,$9933.72,Primary,Bank Transfer
+664,01/19/2023,$5615.88,Primary,Online
+665,04/19/2023,$4903.28,Passive,Online
+666,01/30/2023,$21.01,Secondary,Bank Transfer
+667,01/20/2023,$8858.96,Secondary,Online
+668,03/11/2022,$9502.88,Primary,Online
+669,01/15/2022,$9256.56,Secondary,Bank Transfer
+670,03/21/2023,$8511.13,Secondary,Online
+671,05/08/2022,$9614.33,Secondary,Bank Transfer
+672,10/25/2023,$1732.90,Secondary,Online
+673,05/13/2023,$6220.88,Primary,Bank Transfer
+674,10/31/2022,$2597.02,Primary,Bank Transfer
+675,05/01/2023,$2078.24,Primary,Online
+676,09/23/2023,$9972.82,Passive,Online
+677,07/07/2022,$1161.39,Primary,Online
+678,06/04/2023,$5240.92,Primary,Online
+679,08/06/2022,$147.41,Primary,Bank Transfer
+680,09/21/2022,$4560.22,Passive,Bank Transfer
+681,07/14/2022,$3989.88,Primary,Bank Transfer
+682,01/14/2022,$3873.44,Secondary,Online
+683,10/05/2023,$1208.15,Secondary,Bank Transfer
+684,11/22/2023,$3191.81,Secondary,Online
+685,03/31/2022,$7006.59,Primary,Bank Transfer
+686,03/17/2022,$8631.97,Passive,Online
+687,09/26/2022,$2683.14,Secondary,Online
+688,05/14/2022,$6219.15,Passive,Online
+689,08/12/2022,$435.66,Secondary,Online
+690,09/22/2022,$2157.87,Secondary,Online
+691,06/29/2022,$2201.58,Secondary,Bank Transfer
+692,08/21/2023,$7011.77,Passive,Bank Transfer
+693,07/25/2022,$1516.77,Secondary,Bank Transfer
+694,12/04/2022,$2961.22,Passive,Bank Transfer
+695,10/05/2023,$5882.71,Passive,Online
+696,07/10/2022,$7531.32,Passive,Online
+697,06/07/2022,$8941.31,Secondary,Online
+698,12/23/2022,$9974.96,Passive,Online
+699,10/25/2022,$9271.31,Primary,Online
+700,08/10/2023,$5942.54,Passive,Bank Transfer
+701,02/23/2023,$9440.76,Passive,Online
+702,03/11/2022,$7296.43,Passive,Bank Transfer
+703,03/10/2022,$7759.49,Secondary,Online
+704,07/16/2022,$2980.92,Passive,Online
+705,11/22/2023,$5072.38,Secondary,Bank Transfer
+706,05/21/2023,$9377.51,Secondary,Bank Transfer
+707,06/13/2022,$9348.55,Passive,Online
+708,08/18/2023,$294.96,Primary,Bank Transfer
+709,02/07/2023,$9393.99,Primary,Online
+710,01/27/2023,$2054.51,Secondary,Online
+711,07/10/2022,$7368.14,Secondary,Bank Transfer
+712,11/23/2022,$6100.79,Primary,Bank Transfer
+713,08/09/2022,$7354.99,Secondary,Online
+714,08/07/2023,$9261.48,Secondary,Bank Transfer
+715,09/17/2023,$3974.29,Primary,Online
+716,12/31/2022,$8569.68,Passive,Online
+717,09/10/2022,$9704.03,Passive,Bank Transfer
+718,09/07/2023,$6638.82,Primary,Bank Transfer
+719,03/21/2022,$1957.15,Secondary,Online
+720,07/30/2023,$2121.09,Passive,Online
+721,10/30/2022,$3772.81,Secondary,Online
+722,01/31/2022,$7288.40,Secondary,Online
+723,11/07/2023,$7029.41,Secondary,Bank Transfer
+724,09/29/2023,$2704.71,Passive,Bank Transfer
+725,02/27/2023,$5215.73,Passive,Bank Transfer
+726,05/28/2022,$934.48,Secondary,Online
+727,02/10/2022,$8726.45,Passive,Bank Transfer
+728,01/29/2023,$6082.74,Secondary,Online
+729,04/18/2023,$1554.72,Primary,Bank Transfer
+730,04/05/2022,$6388.29,Secondary,Online
+731,12/29/2023,$9818.93,Primary,Bank Transfer
+732,11/23/2022,$5807.93,Primary,Online
+733,04/16/2022,$5448.09,Primary,Bank Transfer
+734,02/07/2022,$3651.23,Secondary,Online
+735,07/01/2023,$5086.76,Primary,Bank Transfer
+736,09/04/2022,$7137.58,Primary,Bank Transfer
+737,01/08/2023,$376.75,Primary,Bank Transfer
+738,06/22/2023,$3480.82,Passive,Online
+739,06/04/2022,$7709.76,Primary,Online
+740,02/01/2022,$6387.32,Secondary,Online
+741,05/11/2022,$7961.00,Passive,Bank Transfer
+742,11/04/2022,$5235.09,Secondary,Online
+743,01/27/2022,$3823.86,Secondary,Bank Transfer
+744,02/26/2022,$3710.18,Primary,Bank Transfer
+745,07/23/2022,$9468.05,Passive,Bank Transfer
+746,02/28/2022,$7167.08,Primary,Bank Transfer
+747,07/08/2023,$2334.41,Primary,Bank Transfer
+748,09/24/2023,$1605.29,Secondary,Bank Transfer
+749,02/25/2022,$9698.30,Passive,Online
+750,06/22/2022,$6610.22,Primary,Online
+751,09/12/2023,$9417.71,Primary,Bank Transfer
+752,07/29/2023,$1451.47,Primary,Online
+753,09/02/2023,$4151.51,Primary,Bank Transfer
+754,11/30/2023,$3211.81,Passive,Bank Transfer
+755,01/20/2023,$2702.86,Primary,Online
+756,05/29/2022,$2815.18,Secondary,Bank Transfer
+757,03/08/2022,$7647.15,Primary,Online
+758,06/22/2023,$4418.09,Primary,Online
+759,04/20/2023,$3312.85,Primary,Online
+760,01/17/2023,$9208.16,Secondary,Bank Transfer
+761,10/12/2022,$3757.36,Passive,Bank Transfer
+762,03/21/2023,$2231.22,Secondary,Online
+763,04/14/2023,$6725.84,Primary,Online
+764,11/10/2023,$1414.43,Secondary,Online
+765,04/27/2022,$631.18,Primary,Bank Transfer
+766,06/15/2023,$5150.65,Passive,Online
+767,12/08/2023,$5791.38,Secondary,Online
+768,02/19/2022,$478.80,Passive,Online
+769,04/29/2022,$4761.04,Secondary,Online
+770,11/27/2022,$1480.68,Secondary,Online
+771,06/01/2023,$9168.10,Secondary,Online
+772,05/16/2022,$1310.04,Secondary,Bank Transfer
+773,04/10/2022,$915.40,Passive,Online
+774,02/21/2023,$8376.80,Passive,Bank Transfer
+775,01/16/2023,$3125.66,Primary,Bank Transfer
+776,02/05/2023,$8670.49,Secondary,Bank Transfer
+777,04/08/2022,$6249.59,Primary,Bank Transfer
+778,05/20/2023,$5859.28,Primary,Online
+779,03/12/2023,$9031.95,Primary,Online
+780,04/12/2022,$2539.44,Primary,Online
+781,02/12/2022,$2751.39,Secondary,Online
+782,01/06/2023,$7138.95,Passive,Online
+783,11/17/2022,$328.17,Primary,Online
+784,06/12/2023,$8656.79,Passive,Online
+785,12/13/2022,$5432.24,Secondary,Online
+786,06/07/2023,$343.42,Passive,Online
+787,08/24/2023,$6143.94,Passive,Online
+788,11/04/2023,$6463.30,Passive,Online
+789,12/10/2023,$4630.90,Passive,Online
+790,11/20/2023,$3501.01,Passive,Bank Transfer
+791,06/08/2022,$80.35,Secondary,Online
+792,08/09/2022,$4626.36,Primary,Online
+793,07/03/2023,$4028.33,Passive,Bank Transfer
+794,01/14/2022,$1283.02,Secondary,Bank Transfer
+795,04/22/2022,$5570.60,Secondary,Online
+796,08/21/2022,$318.63,Secondary,Online
+797,12/02/2023,$8269.47,Passive,Online
+798,07/06/2022,$6412.55,Primary,Bank Transfer
+799,03/13/2022,$532.79,Primary,Online
+800,11/03/2022,$3738.95,Secondary,Online
+801,10/29/2023,$2912.12,Secondary,Online
+802,05/14/2023,$730.62,Primary,Bank Transfer
+803,07/15/2022,$7683.97,Passive,Bank Transfer
+804,01/25/2023,$6288.53,Passive,Online
+805,11/12/2023,$6811.07,Primary,Online
+806,11/25/2022,$7289.22,Secondary,Bank Transfer
+807,06/19/2023,$7353.74,Passive,Bank Transfer
+808,03/23/2022,$6268.81,Primary,Online
+809,04/29/2023,$7631.52,Secondary,Online
+810,02/13/2023,$8762.23,Secondary,Online
+811,11/09/2023,$6398.47,Passive,Bank Transfer
+812,05/01/2023,$5154.25,Primary,Bank Transfer
+813,06/21/2023,$985.44,Secondary,Bank Transfer
+814,09/27/2023,$9001.61,Secondary,Bank Transfer
+815,10/24/2022,$9384.65,Passive,Online
+816,04/12/2023,$9155.44,Secondary,Online
+817,05/15/2022,$1664.56,Passive,Bank Transfer
+818,09/28/2022,$2456.20,Passive,Online
+819,04/08/2023,$5953.69,Primary,Online
+820,01/23/2022,$6878.33,Passive,Online
+821,08/11/2023,$9556.61,Secondary,Bank Transfer
+822,01/25/2023,$9342.47,Primary,Online
+823,07/30/2022,$3286.25,Secondary,Bank Transfer
+824,04/05/2023,$8610.93,Primary,Bank Transfer
+825,09/05/2023,$6487.51,Passive,Online
+826,11/28/2022,$9427.00,Secondary,Bank Transfer
+827,03/23/2022,$8735.00,Primary,Online
+828,10/28/2022,$8252.62,Passive,Bank Transfer
+829,05/21/2022,$3003.76,Passive,Online
+830,03/22/2023,$5712.40,Secondary,Online
+831,07/11/2023,$4234.37,Passive,Online
+832,01/31/2023,$4519.71,Passive,Online
+833,01/24/2022,$2577.84,Secondary,Bank Transfer
+834,01/04/2022,$5443.68,Primary,Bank Transfer
+835,02/27/2022,$6666.48,Primary,Bank Transfer
+836,09/25/2022,$9815.63,Primary,Bank Transfer
+837,04/26/2023,$3064.23,Secondary,Online
+838,09/08/2023,$5151.07,Secondary,Bank Transfer
+839,01/09/2023,$1841.50,Secondary,Online
+840,09/24/2022,$4657.11,Secondary,Online
+841,06/21/2023,$6151.15,Passive,Online
+842,09/27/2023,$9782.75,Passive,Online
+843,01/17/2023,$3338.39,Secondary,Bank Transfer
+844,12/01/2023,$2345.37,Primary,Online
+845,05/24/2022,$9595.74,Secondary,Bank Transfer
+846,03/23/2022,$8658.82,Passive,Online
+847,11/03/2022,$8229.86,Primary,Bank Transfer
+848,08/06/2023,$7524.94,Primary,Bank Transfer
+849,09/13/2022,$3010.74,Secondary,Bank Transfer
+850,12/25/2023,$4519.07,Secondary,Bank Transfer
+851,09/07/2023,$1510.22,Passive,Online
+852,07/03/2023,$5601.24,Passive,Online
+853,06/02/2022,$4146.98,Secondary,Online
+854,06/05/2023,$8119.49,Primary,Bank Transfer
+855,03/13/2022,$4157.78,Primary,Bank Transfer
+856,12/01/2022,$4917.61,Secondary,Online
+857,09/06/2023,$875.20,Primary,Bank Transfer
+858,02/24/2022,$6539.40,Passive,Online
+859,12/27/2023,$7605.84,Secondary,Bank Transfer
+860,03/15/2023,$7864.87,Secondary,Online
+861,11/05/2023,$184.29,Primary,Online
+862,12/10/2023,$2748.74,Passive,Bank Transfer
+863,05/03/2023,$2446.57,Primary,Online
+864,03/19/2022,$81.52,Secondary,Bank Transfer
+865,02/28/2022,$2626.03,Primary,Online
+866,01/16/2023,$1438.61,Primary,Bank Transfer
+867,06/14/2023,$6737.19,Primary,Bank Transfer
+868,12/22/2023,$2343.95,Primary,Online
+869,10/23/2023,$9247.34,Passive,Online
+870,02/08/2023,$8892.69,Passive,Online
+871,08/07/2022,$1976.64,Primary,Online
+872,08/07/2022,$9132.47,Passive,Bank Transfer
+873,04/14/2023,$2483.92,Passive,Bank Transfer
+874,10/09/2023,$1137.81,Passive,Online
+875,01/05/2023,$7425.47,Primary,Online
+876,12/14/2023,$9412.01,Primary,Online
+877,02/10/2022,$4208.89,Secondary,Online
+878,01/10/2023,$4563.12,Secondary,Online
+879,12/12/2023,$4151.25,Passive,Bank Transfer
+880,05/21/2023,$9885.31,Primary,Bank Transfer
+881,02/25/2023,$7235.91,Secondary,Online
+882,12/24/2023,$7487.30,Passive,Bank Transfer
+883,05/19/2022,$6208.90,Passive,Online
+884,02/28/2023,$6333.31,Passive,Online
+885,10/06/2022,$8693.99,Secondary,Bank Transfer
+886,03/19/2023,$7113.42,Passive,Online
+887,06/04/2023,$4667.79,Secondary,Online
+888,08/01/2023,$6469.36,Primary,Online
+889,05/21/2023,$5475.76,Primary,Bank Transfer
+890,12/27/2022,$3874.84,Secondary,Bank Transfer
+891,04/19/2023,$705.32,Secondary,Online
+892,08/27/2022,$3473.05,Passive,Online
+893,05/23/2022,$5784.92,Primary,Bank Transfer
+894,10/26/2022,$4905.17,Secondary,Bank Transfer
+895,10/27/2022,$806.90,Passive,Bank Transfer
+896,02/17/2022,$8267.44,Primary,Bank Transfer
+897,03/15/2023,$9071.79,Secondary,Online
+898,03/28/2023,$8172.52,Primary,Online
+899,06/11/2023,$2930.52,Primary,Bank Transfer
+900,03/13/2022,$5854.11,Secondary,Bank Transfer
+901,12/08/2022,$1227.22,Passive,Online
+902,10/30/2022,$2241.63,Secondary,Bank Transfer
+903,10/02/2022,$8548.49,Primary,Online
+904,03/05/2023,$6791.72,Passive,Bank Transfer
+905,08/29/2022,$9931.87,Secondary,Online
+906,05/26/2022,$6362.94,Secondary,Bank Transfer
+907,05/30/2022,$2558.00,Secondary,Bank Transfer
+908,04/26/2023,$4730.92,Secondary,Bank Transfer
+909,04/29/2023,$9826.26,Primary,Online
+910,02/25/2022,$618.72,Primary,Online
+911,09/29/2022,$2861.74,Passive,Bank Transfer
+912,06/15/2022,$3011.65,Secondary,Bank Transfer
+913,01/22/2022,$1708.43,Primary,Online
+914,06/27/2022,$7211.89,Passive,Online
+915,07/17/2023,$2132.77,Primary,Bank Transfer
+916,11/28/2023,$1840.66,Primary,Online
+917,06/04/2023,$1893.98,Secondary,Online
+918,01/20/2023,$159.83,Primary,Bank Transfer
+919,07/10/2022,$5369.97,Secondary,Online
+920,09/02/2022,$9650.15,Primary,Online
+921,10/10/2022,$5583.92,Passive,Bank Transfer
+922,03/15/2022,$5600.50,Passive,Online
+923,06/07/2022,$5711.92,Secondary,Online
+924,02/17/2022,$3231.95,Secondary,Bank Transfer
+925,02/07/2022,$6681.90,Primary,Online
+926,07/12/2022,$8630.62,Secondary,Bank Transfer
+927,09/21/2023,$2068.70,Passive,Online
+928,04/01/2023,$1641.41,Secondary,Bank Transfer
+929,12/27/2023,$7224.66,Passive,Bank Transfer
+930,12/17/2023,$3947.64,Passive,Bank Transfer
+931,11/17/2023,$9211.98,Passive,Online
+932,03/09/2023,$8645.33,Passive,Bank Transfer
+933,04/04/2022,$373.84,Secondary,Online
+934,12/23/2022,$4973.15,Passive,Bank Transfer
+935,07/20/2022,$2747.31,Primary,Online
+936,06/17/2022,$4936.44,Passive,Online
+937,05/02/2022,$2368.43,Secondary,Online
+938,02/20/2023,$1652.13,Secondary,Online
+939,12/17/2023,$8255.01,Passive,Bank Transfer
+940,04/30/2023,$6765.13,Secondary,Online
+941,12/23/2022,$6631.46,Primary,Bank Transfer
+942,02/17/2023,$8476.64,Secondary,Online
+943,12/02/2022,$3774.84,Primary,Bank Transfer
+944,08/01/2022,$5614.69,Secondary,Online
+945,09/14/2022,$9738.59,Secondary,Bank Transfer
+946,01/09/2022,$4924.38,Primary,Online
+947,06/15/2023,$5757.13,Passive,Bank Transfer
+948,07/14/2022,$9038.98,Primary,Online
+949,01/30/2022,$2505.18,Passive,Online
+950,10/18/2023,$2672.33,Secondary,Online
+951,09/18/2022,$1575.79,Passive,Bank Transfer
+952,03/16/2022,$5704.00,Primary,Online
+953,12/23/2023,$4983.19,Primary,Bank Transfer
+954,08/29/2023,$7963.52,Secondary,Online
+955,09/08/2023,$3046.39,Secondary,Online
+956,11/28/2023,$6287.95,Passive,Online
+957,02/26/2022,$4447.36,Secondary,Online
+958,10/29/2023,$3716.74,Primary,Online
+959,03/29/2022,$4364.58,Primary,Bank Transfer
+960,03/12/2023,$1331.03,Passive,Online
+961,07/04/2022,$2559.56,Primary,Online
+962,11/05/2023,$1498.32,Secondary,Bank Transfer
+963,06/24/2022,$7156.59,Primary,Bank Transfer
+964,01/14/2022,$5257.82,Secondary,Online
+965,10/16/2022,$1979.93,Primary,Bank Transfer
+966,02/02/2022,$9395.59,Passive,Online
+967,01/01/2022,$5182.88,Passive,Bank Transfer
+968,05/05/2023,$3987.06,Passive,Online
+969,06/30/2023,$6894.12,Primary,Online
+970,02/08/2023,$7060.83,Primary,Bank Transfer
+971,11/17/2023,$316.33,Primary,Bank Transfer
+972,10/04/2022,$1131.69,Passive,Online
+973,03/23/2022,$8876.13,Primary,Bank Transfer
+974,09/16/2023,$4288.61,Passive,Bank Transfer
+975,07/07/2023,$590.50,Passive,Online
+976,09/04/2022,$6185.06,Passive,Online
+977,11/04/2022,$3888.03,Primary,Online
+978,11/07/2023,$9704.70,Secondary,Online
+979,02/06/2023,$1550.17,Secondary,Online
+980,12/26/2023,$3781.50,Primary,Online
+981,10/13/2022,$1109.57,Passive,Bank Transfer
+982,10/01/2022,$5429.95,Passive,Online
+983,12/23/2023,$4363.53,Secondary,Bank Transfer
+984,05/22/2022,$8973.53,Primary,Bank Transfer
+985,01/22/2023,$9230.09,Passive,Bank Transfer
+986,04/10/2023,$1127.81,Secondary,Bank Transfer
+987,12/27/2022,$7873.30,Secondary,Bank Transfer
+988,02/01/2023,$819.28,Secondary,Online
+989,11/15/2023,$9355.26,Passive,Bank Transfer
+990,11/12/2023,$7290.90,Secondary,Online
+991,01/20/2023,$3982.39,Passive,Bank Transfer
+992,02/13/2023,$7318.09,Primary,Bank Transfer
+993,09/03/2023,$4225.01,Passive,Online
+994,05/27/2023,$2389.25,Primary,Online
+995,06/29/2023,$7785.04,Primary,Online
+996,05/27/2022,$5031.88,Secondary,Bank Transfer
+997,12/01/2022,$2880.32,Passive,Bank Transfer
+998,12/20/2022,$8233.70,Secondary,Bank Transfer
+999,03/01/2022,$9574.18,Secondary,Bank Transfer
+1000,09/13/2023,$4767.26,Secondary,Bank Transfer

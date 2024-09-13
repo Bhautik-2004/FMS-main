@@ -5,7 +5,7 @@ from tkinter import ttk
 from tkcalendar import DateEntry
 
 expense_data = pd.read_csv('MOCK_DATA.csv')
-
+income_data = pd.read_csv('income.csv')
 
 # Function to add new data
 def add_expense():
@@ -195,6 +195,160 @@ def delete_expense():
     pass
 
 
+def add_income():
+    new_window = Toplevel()
+    new_window.title("Add Income")
+    new_window.geometry('300x250')
+
+    Label(new_window, text='Income ID: ').grid(row=0, column=0, padx=10, pady=5)
+    income_id_input = Entry(new_window)
+    income_id_input.grid(row=0, column=1, padx=10, pady=5)
+
+    Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
+    date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                           date_pattern='DD/MM/yyyy')
+    date_input.grid(row=1, column=1, padx=10, pady=5)
+
+    Label(new_window, text='Amount: ').grid(row=2, column=0, padx=10, pady=5)
+    amount_input = Entry(new_window)
+    amount_input.grid(row=2, column=1, padx=10, pady=5)
+
+    category_values = ['Primary', 'Secondary', 'Passive']
+    category_var = StringVar(value='Select')
+    Label(new_window, text='Category: ').grid(row=3, column=0, padx=10, pady=5)
+    category_input = OptionMenu(new_window, category_var, *category_values)
+    category_input.grid(row=3, column=1, padx=10, pady=5)
+
+    method_values = ['Bank Transfer', 'Online']
+    method_var = StringVar(value='Select')
+    Label(new_window, text='Payment Method: ').grid(row=4, column=0, padx=10, pady=5)
+    method_input = OptionMenu(new_window, method_var, *method_values)
+    method_input.grid(row=4, column=1, padx=10, pady=5)
+
+    def submit():
+        if (not income_id_input.get() or
+                category_var.get() == 'Select' or
+                not amount_input.get() or
+                method_var.get() == 'Select'):
+            messagebox.showerror("Error", "Please fill in all fields.")
+            return
+
+        try:
+            new_expense = pd.DataFrame({
+                "expense_id": [income_id_input.get()],
+                "date": [date_input.get_date()],
+                "amount": [float(amount_input.get()) if amount_input.get().replace('.', '', 1).isdigit() else 0.0],
+                "category": [category_var.get()],
+                "method": [method_var.get()],
+            })
+
+            global income_data
+            income_data = pd.concat([income_data, new_expense], ignore_index=True)
+            # income_data.to_csv('MOCK_DATA.csv', index=False)
+
+            messagebox.showinfo("Success", "Data added successfully!")
+
+            new_window.destroy()
+
+        except ValueError:
+            messagebox.showerror("Error", "Invalid amount. Please enter a valid number.")
+    Button(new_window, text="Submit", command=submit).grid(row=5, column=0, columnspan=2, pady=10)
+
+
+def view_income():
+    new_window = Toplevel(window)
+    new_window.title('View Income')
+    new_window.geometry('550x350')
+
+    Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
+    start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                                 date_pattern='DD/MM/yyyy')
+    start_date_input.grid(row=0, column=1, padx=10, pady=5)
+
+    Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
+    end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                               date_pattern='DD/MM/yyyy')
+    end_date_input.grid(row=0, column=3, padx=10, pady=5)
+
+    category_values = ['Primary', 'Secondary', 'Passive']
+    category_var = StringVar(value='All')
+    Label(new_window, text='Category: ').grid(row=1, column=0, padx=10, pady=5)
+    category_input = OptionMenu(new_window, category_var, *category_values)
+    category_input.grid(row=1, column=1, padx=10, pady=5)
+
+    # Frame for Treeview and Scrollbars
+    view_income_frame = Frame(new_window)
+    view_income_frame.grid(row=2, column=0, columnspan=4, padx=10, pady=10)
+
+    # Scrollbars
+    view_income_y_scroll = Scrollbar(view_income_frame, orient='vertical')
+    view_income_y_scroll.grid(row=0, column=1, sticky='ns')
+
+    view_income_x_scroll = Scrollbar(view_income_frame, orient='horizontal')
+    view_income_x_scroll.grid(row=2, column=0, sticky='ew')
+
+    # Treeview to display expenses
+    view_income_table = ttk.Treeview(view_income_frame, yscrollcommand=view_income_y_scroll.set,
+                                      xscrollcommand=view_income_x_scroll.set)
+    view_income_table.grid(row=0, column=0)
+
+    # Configure Scrollbars
+    view_income_y_scroll.config(command=view_income_table.yview)
+    view_income_x_scroll.config(command=view_income_table.xview)
+
+    view_income_table['columns'] = ('expense_id', 'date', 'amount', 'category', 'payment_method')
+    # format our column
+    view_income_table.column("#0", width=0, stretch=NO)
+    view_income_table.column("expense_id", anchor=CENTER, width=80)
+    view_income_table.column("date", anchor=CENTER, width=80)
+    view_income_table.column("amount", anchor=CENTER, width=80)
+    view_income_table.column("category", anchor=CENTER, width=90)
+    view_income_table.column("payment_method", anchor=CENTER, width=150)
+
+    # Create Headings
+    view_income_table.heading("#0", text="", anchor=CENTER)
+    view_income_table.heading("expense_id", text="ID", anchor=CENTER)
+    view_income_table.heading("date", text="Date", anchor=CENTER)
+    view_income_table.heading("amount", text="Amount", anchor=CENTER)
+    view_income_table.heading("category", text="Category", anchor=CENTER)
+    view_income_table.heading("payment_method", text="Mode of Payment", anchor=CENTER)
+
+    def submit():
+        global income_data
+        start_date = start_date_input.get_date()
+        end_date = end_date_input.get_date()
+
+        selected_category = category_var.get()
+
+        income_data['date'] = pd.to_datetime(income_data['date'])
+
+        filtered_data = income_data[(income_data['date'] >= pd.to_datetime(start_date)) &
+                                     (income_data['date'] <= pd.to_datetime(end_date))]
+
+        if selected_category != 'All':
+            filtered_data = filtered_data[filtered_data['category'] == selected_category]
+
+        # Clear the Treeview
+        for row in view_income_table.get_children():
+            view_income_table.delete(row)
+
+        # Insert filtered data into the Treeview
+        for _, row in filtered_data.iterrows():
+            view_income_table.insert('', 'end', values=(
+                int(row['income_id']), row['date'].strftime('%d-%m-%Y'), row['amount'], row['category'],
+                row['method']))
+
+    Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
+
+
+def edit_income():
+    pass
+
+
+def delete_income():
+    pass
+
+
 # Main Tkinter window
 window = Tk()
 window.title('FMS')
@@ -220,10 +374,10 @@ expenses_menu.add_command(label='Delete Expense', command=delete_expense)
 
 income_menu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label='Income', menu=income_menu)
-income_menu.add_command(label='Add new Income')
-income_menu.add_command(label='View Income')
-income_menu.add_command(label='Edit Income')
-income_menu.add_command(label='Delete Income')
+income_menu.add_command(label='Add new Income', command=add_income)
+income_menu.add_command(label='View Income', command=view_income)
+income_menu.add_command(label='Edit Income', command=edit_income)
+income_menu.add_command(label='Delete Income', command=delete_income)
 
 budget_menu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label='Budget', menu=budget_menu)
