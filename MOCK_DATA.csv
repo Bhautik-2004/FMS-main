@@ -4,7 +4,7 @@ expense_id,date,amount,category,payment_method
 3,2023-04-02,913.81,Clothing,Debit Card
 4,2022-10-16,5396.0,Living Expenses,Credit Card
 5,2022-07-24,3086.98,Utilities,Debit Card
-6,2023-09-16,6917.71,Utilities,Mobile Payment
+6,2023-09-16,6917.71,Groceries,Mobile Payment
 7,2023-07-28,2551.31,Groceries,Debit Card
 8,2023-09-15,5114.03,Clothing,Credit Card
 9,2023-03-20,2864.37,Medical,Cash
@@ -32,7 +32,7 @@ expense_id,date,amount,category,payment_method
 31,2023-12-26,408.65,Living Expenses,Debit Card
 32,2022-03-17,8292.22,Clothing,Cash
 33,2023-10-25,9666.82,Medical,Credit Card
-34,2023-09-02,7597.88,Medical,Credit Card
+34,2023-02-09,7597.88,Groceries,Debit Card
 35,2022-09-06,6662.05,Charity,Mobile Payment
 36,2022-05-21,1271.85,Dine Out,Mobile Payment
 37,2023-04-11,8971.03,Utilities,Debit Card
@@ -533,7 +533,7 @@ expense_id,date,amount,category,payment_method
 532,2023-12-10,832.12,Entertainment,Mobile Payment
 533,2022-02-13,3221.6,Entertainment,Credit Card
 534,2023-03-07,4810.15,Living Expenses,Credit Card
-535,2023-09-04,3043.6,Utilities,Credit Card
+535,2023-04-09,3043.6,Clothing,Debit Card
 536,2023-04-09,6395.11,Dine Out,Cash
 537,2022-08-29,5873.82,Utilities,Credit Card
 538,2023-03-13,9135.58,Medical,Cash

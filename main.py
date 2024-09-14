@@ -28,7 +28,7 @@ def add_expense():
 
     Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
     date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                           date_pattern='dd/MM/yyyy')
+                           date_pattern='yyyy/MM/dd')
     date_input.grid(row=1, column=1, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
@@ -88,12 +88,12 @@ def view_expense():
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
     start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                                 date_pattern='dd/MM/yyyy')
+                                 date_pattern='yyyy/MM/dd')
     start_date_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
     end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                               date_pattern='dd/MM/yyyy')
+                               date_pattern='yyyy/MM/dd')
     end_date_input.grid(row=0, column=3, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
@@ -162,7 +162,7 @@ def view_expense():
         # Insert filtered data into the Treeview
         for _, row in filtered_data.iterrows():
             view_expense_table.insert('', 'end', values=(int(row['expense_id']),
-                                                         row['date'].strftime('%d-%m-%Y'), row['amount'],
+                                                         row['date'].strftime('%Y-%m-%d'), row['amount'],
                                                          row['category'], row['payment_method']))
 
     Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
@@ -176,12 +176,12 @@ def edit_and_delete_expense():
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
     start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                                 date_pattern='dd/MM/yyyy')
+                                 date_pattern='yyyy/MM/dd')
     start_date_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
     end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                               date_pattern='dd/MM/yyyy')
+                               date_pattern='yyyy/MM/dd')
     end_date_input.grid(row=0, column=3, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
@@ -250,7 +250,7 @@ def edit_and_delete_expense():
         # Insert filtered data into the Treeview
         for _, row in filtered_data.iterrows():
             view_expense_table.insert('', 'end', values=(int(row['expense_id']),
-                                                         row['date'].strftime('%d-%m-%Y'), row['amount'],
+                                                         row['date'].strftime('%Y-%m-%d'), row['amount'],
                                                          row['category'], row['payment_method']))
 
     def edit_selected():
@@ -277,7 +277,7 @@ def edit_and_delete_expense():
 
             Label(edit_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5, sticky='w')
             date_input = DateEntry(edit_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                                   date_pattern='dd/MM/yyyy')  # Correct date format
+                                   date_pattern='yyyy/MM/dd')  # Correct date format
             date_input.set_date(pd.to_datetime(current_date, dayfirst=True).date())  # Ensure day-first parsing
             date_input.grid(row=1, column=1, padx=10, pady=5)
 
@@ -302,7 +302,7 @@ def edit_and_delete_expense():
             def update_expense():
                 global expense_data
                 # Ensure correct format and day-first approach
-                new_date = date_input.get_date().strftime('%d-%m-%Y')  # Format date as day-month-year
+                new_date = date_input.get_date().strftime('%Y-%m-%d')  # Format date as day-month-year
                 new_amount = float(amount_input.get())  # Convert to float if necessary
                 new_category = category_var.get()
                 new_payment_method = payment_method_var.get()
@@ -374,7 +374,7 @@ def add_income():
 
     Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
     date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                           date_pattern='dd/MM/yyyy')
+                           date_pattern='yyyy/MM/dd')
     date_input.grid(row=1, column=1, padx=10, pady=5)
 
     Label(new_window, text='Amount: ').grid(row=2, column=0, padx=10, pady=5)
@@ -432,12 +432,12 @@ def view_income():
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
     start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                                 date_pattern='dd/MM/yyyy')
+                                 date_pattern='yyyy/MM/dd')
     start_date_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
     end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                               date_pattern='dd/MM/yyyy')
+                               date_pattern='yyyy/MM/dd')
     end_date_input.grid(row=0, column=3, padx=10, pady=5)
 
     category_values = ['Primary', 'Secondary', 'Passive']
@@ -505,7 +505,7 @@ def view_income():
         # Insert filtered data into the Treeview
         for _, row in filtered_data.iterrows():
             view_income_table.insert('', 'end', values=(
-                int(row['income_id']), row['date'].strftime('%d-%m-%Y'), row['amount'], row['category'],
+                int(row['income_id']), row['date'].strftime('%Y-%m-%d'), row['amount'], row['category'],
                 row['method']))
 
     Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
