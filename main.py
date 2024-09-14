@@ -7,18 +7,28 @@ from tkcalendar import DateEntry
 expense_data = pd.read_csv('MOCK_DATA.csv')
 income_data = pd.read_csv('income.csv')
 
+
 # Function to add new data
 def add_expense():
+    global expense_data
     new_window = Toplevel(window)
     new_window.title("Add New Expense")
     new_window.geometry("300x250")
+    new_window.resizable(False, False)
+
+    if not expense_data.empty:
+        last_id = int(expense_data['expense_id'].tail(1).values[0])
+        default_id = IntVar(new_window, value=last_id + 1)
+    else:
+        default_id = 1
 
     Label(new_window, text='Expense ID: ').grid(row=0, column=0, padx=10, pady=5)
-    expense_id_input = Entry(new_window)
+    expense_id_input = Entry(new_window, textvariable=default_id)
     expense_id_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
-    date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2, date_pattern='DD/MM/yyyy')
+    date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                           date_pattern='DD/MM/yyyy')
     date_input.grid(row=1, column=1, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
@@ -57,7 +67,8 @@ def add_expense():
 
             global expense_data
             expense_data = pd.concat([expense_data, new_expense], ignore_index=True)
-            # expense_data.to_csv('MOCK_DATA.csv', index=False)
+            expense_data.to_csv('MOCK_DATA.csv', index=False)
+            expense_data = pd.read_csv('MOCK_DATA.csv')
 
             messagebox.showinfo("Success", "Data added successfully!")
 
@@ -73,13 +84,16 @@ def view_expense():
     new_window = Toplevel(window)
     new_window.title('View Expenses')
     new_window.geometry('550x350')
+    new_window.resizable(False, False)
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
-    start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2, date_pattern='DD/MM/yyyy')
+    start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                                 date_pattern='DD/MM/yyyy')
     start_date_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
-    end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2, date_pattern='DD/MM/yyyy')
+    end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                               date_pattern='DD/MM/yyyy')
     end_date_input.grid(row=0, column=3, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
@@ -154,54 +168,202 @@ def view_expense():
     Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
 
 
-def edit_expense():
+def edit_and_delete_expense():
     new_window = Toplevel(window)
-    new_window.title("Edit Expense")
-    new_window.geometry("300x250")
+    new_window.title('View Expenses')
+    new_window.geometry('550x400')
+    new_window.resizable(False, False)
 
-    Label(new_window, text='Expense ID: ').grid(row=0, column=0, padx=10, pady=5)
-    expense_id_input = Entry(new_window)
-    expense_id_input.grid(row=0, column=1, padx=10, pady=5)
+    Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
+    start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                                 date_pattern='DD/MM/yyyy')
+    start_date_input.grid(row=0, column=1, padx=10, pady=5)
+
+    Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
+    end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                               date_pattern='DD/MM/yyyy')
+    end_date_input.grid(row=0, column=3, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
                        'Living Expenses', 'Dine Out', 'Charity']
-    category_var = StringVar(value='Select')
-    Label(new_window, text='New Category: ').grid(row=1, column=0, padx=10, pady=5)
+    category_var = StringVar(value='All')
+    Label(new_window, text='Category: ').grid(row=1, column=0, padx=10, pady=5)
     category_input = OptionMenu(new_window, category_var, *category_values)
     category_input.grid(row=1, column=1, padx=10, pady=5)
 
-    Label(new_window, text='New Amount: ').grid(row=2, column=0, padx=10, pady=5)
-    amount_input = Entry(new_window)
-    amount_input.grid(row=2, column=1, padx=10, pady=5)
+    # Frame for Treeview and Scrollbars
+    view_expense_frame = Frame(new_window)
+    view_expense_frame.grid(row=2, column=0, columnspan=4, padx=10, pady=10)
+
+    # Scrollbars
+    view_expense_y_scroll = Scrollbar(view_expense_frame, orient='vertical')
+    view_expense_y_scroll.grid(row=0, column=1, sticky='ns')
+
+    view_expense_x_scroll = Scrollbar(view_expense_frame, orient='horizontal')
+    view_expense_x_scroll.grid(row=2, column=0, sticky='ew')
+
+    # Treeview to display expenses
+    view_expense_table = ttk.Treeview(view_expense_frame, yscrollcommand=view_expense_y_scroll.set,
+                                      xscrollcommand=view_expense_x_scroll.set)
+    view_expense_table.grid(row=0, column=0)
+
+    # Configure Scrollbars
+    view_expense_y_scroll.config(command=view_expense_table.yview)
+    view_expense_x_scroll.config(command=view_expense_table.xview)
+
+    view_expense_table['columns'] = ('expense_id', 'date', 'amount', 'category', 'payment_method')
+    # format our column
+    view_expense_table.column("#0", width=0, stretch=NO)
+    view_expense_table.column("expense_id", anchor=CENTER, width=80)
+    view_expense_table.column("date", anchor=CENTER, width=80)
+    view_expense_table.column("amount", anchor=CENTER, width=80)
+    view_expense_table.column("category", anchor=CENTER, width=90)
+    view_expense_table.column("payment_method", anchor=CENTER, width=150)
+
+    # Create Headings
+    view_expense_table.heading("#0", text="", anchor=CENTER)
+    view_expense_table.heading("expense_id", text="ID", anchor=CENTER)
+    view_expense_table.heading("date", text="Date", anchor=CENTER)
+    view_expense_table.heading("amount", text="Amount", anchor=CENTER)
+    view_expense_table.heading("category", text="Category", anchor=CENTER)
+    view_expense_table.heading("payment_method", text="Mode of Payment", anchor=CENTER)
 
     def submit():
-        index = expense_data[expense_data['expense_id'] == expense_id_input.get()].index
+        global expense_data
+        start_date = start_date_input.get_date()
+        end_date = end_date_input.get_date()
 
-        if not index.empty:
-            if amount_input.get() is not None:
-                expense_data.at[index[0], 'amount'] = amount_input.get()
-            if category_var.get() is not None:
-                expense_data.at[index[0], 'category'] = category_var.get()
+        selected_category = category_var.get()
 
-            expense_data.to_csv('MOCK_DATA.csv', index=False)
-            print(f"Expense with ID {expense_id_input.get()} updated successfully.")
+        expense_data['date'] = pd.to_datetime(expense_data['date'])
+
+        filtered_data = expense_data[(expense_data['date'] >= pd.to_datetime(start_date)) &
+                                     (expense_data['date'] <= pd.to_datetime(end_date))]
+
+        if selected_category != 'All':
+            filtered_data = filtered_data[filtered_data['category'] == selected_category]
+
+        # Clear the Treeview
+        for row in view_expense_table.get_children():
+            view_expense_table.delete(row)
+
+        # Insert filtered data into the Treeview
+        for _, row in filtered_data.iterrows():
+            view_expense_table.insert('', 'end', values=(int(row['expense_id']),
+                                                         row['date'].strftime('%d-%m-%Y'), row['amount'],
+                                                         row['category'], row['payment_method']))
+
+    def edit_selected():
+        global expense_data
+        selected_item = view_expense_table.selection()  # Get selected row
+
+        if selected_item:
+            item_values = view_expense_table.item(selected_item, 'values')
+
+            # Extract the first value (expense_id) from the tuple
+            expense_id = int(item_values[0])
+            edit_window = Toplevel(window)
+            edit_window.title(f'Edit Expense #{expense_id}')
+            edit_window.geometry('300x250')
+            edit_window.resizable(False, False)
+
+            Label(edit_window, text=f'Expense ID: {expense_id}').grid(row=0, column=0, padx=10, pady=10, sticky='w')
+
+            current_date = expense_data.loc[expense_data['expense_id'] == expense_id, 'date'].values[0]
+            current_amount = expense_data.loc[expense_data['expense_id'] == expense_id, 'amount'].values[0]
+            current_category = expense_data.loc[expense_data['expense_id'] == expense_id, 'category'].values[0]
+            current_payment_method = expense_data.loc[expense_data['expense_id'] == expense_id, 'payment_method'].values[0]
+
+            Label(edit_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5, sticky='w')
+            date_input = DateEntry(edit_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                                   date_pattern='DD/MM/yyyy')
+            date_input.set_date(pd.to_datetime(current_date).date())  # Set initial date
+            date_input.grid(row=1, column=1, padx=10, pady=5)
+
+            Label(edit_window, text='Amount: ').grid(row=2, column=0, padx=10, pady=5, sticky='w')
+            amount_input = Entry(edit_window)
+            amount_input.insert(0, current_amount)
+            amount_input.grid(row=2, column=1, padx=10, pady=5)
+
+            Label(edit_window, text='Category: ').grid(row=3, column=0, padx=10, pady=5, sticky='w')
+            category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
+                               'Living Expenses', 'Dine Out', 'Charity']
+            category_var = StringVar(value=current_category)
+            category_input = OptionMenu(edit_window, category_var, *category_values)
+            category_input.grid(row=3, column=1, padx=10, pady=5)
+
+            Label(edit_window, text='Payment Method: ').grid(row=4, column=0, padx=10, pady=5, sticky='w')
+            payment_method_values = ['Debit Card', 'Credit Card', 'Mobile Payment', 'Cash']
+            payment_method_var_var = StringVar(value=current_payment_method)
+            payment_method_input = OptionMenu(edit_window, payment_method_var_var, *payment_method_values)
+            payment_method_input.grid(row=4, column=1, padx=10, pady=5)
+
+            def update_expense():
+                global expense_data
+                new_date = date_input.get_date().strftime('%d-%m-%Y')  # Format date as needed
+                new_amount = float(amount_input.get())  # Convert to float if necessary
+                new_category = category_var.get()
+                new_payment_method = payment_method_input.get()
+
+                expense_data.loc[expense_data['expense_id'] == expense_id, 'date'] = new_date
+                expense_data.loc[expense_data['expense_id'] == expense_id, 'amount'] = new_amount
+                expense_data.loc[expense_data['expense_id'] == expense_id, 'category'] = new_category
+                expense_data.loc[expense_data['expense_id'] == expense_id, 'payment_method'] = new_payment_method
+
+                view_expense_table.item(selected_item,
+                                        values=(expense_id, new_date, new_amount, new_category, new_payment_method))
+
+                expense_data.to_csv('MOCK_DATA.csv', index=False)
+                expense_data = pd.read_csv('MOCK_DATA.csv')
+
+                edit_window.destroy()
+                messagebox.showinfo("Success", f"Expense #{expense_id} updated successfully!")
+
+            Button(edit_window, text="Update", command=update_expense).grid(row=5, column=0, pady=5)
+
         else:
-            print(f"Expense with ID {expense_id_input.get()} not found.")
+            messagebox.showerror("Error", "No entry selected to edit.")
 
-    Button(new_window, text="Submit", command=submit).grid(row=3, column=0, columnspan=2, pady=10)
+    def delete_selected():
+        global expense_data
 
+        selected_item = view_expense_table.selection()
 
-def delete_expense():
-    pass
+        if selected_item:
+            item_values = view_expense_table.item(selected_item, 'values')
+
+            expense_id = int(item_values[0])
+
+            confirm = messagebox.askyesno("Confirm Delete", "Are you sure you want to delete this entry?")
+            if confirm:
+                view_expense_table.delete(selected_item)
+
+                expense_data = expense_data[expense_data['expense_id'] != expense_id]
+
+                expense_data.to_csv('MOCK_DATA.csv', index=False)
+            else:
+                messagebox.showerror("Error", "No entry selected to delete.")
+        else:
+            messagebox.showerror("Error", "No entry selected to delete.")
+
+    Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
+    Button(new_window, text="Edit Selected", command=edit_selected).grid(row=3, column=0, columnspan=3, pady=5)
+    Button(new_window, text="Delete Selected", command=delete_selected).grid(row=3, column=1, columnspan=4, pady=5)
 
 
 def add_income():
+    global income_data
     new_window = Toplevel()
     new_window.title("Add Income")
     new_window.geometry('300x250')
+    new_window.resizable(False, False)
 
+    if not expense_data.empty:
+        default_id = IntVar(new_window, value=income_data['income_id'].tail(1).values[0]+1)
+    else:
+        default_id = 1
     Label(new_window, text='Income ID: ').grid(row=0, column=0, padx=10, pady=5)
-    income_id_input = Entry(new_window)
+    income_id_input = Entry(new_window, textvariable=default_id)
     income_id_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
@@ -244,7 +406,8 @@ def add_income():
 
             global income_data
             income_data = pd.concat([income_data, new_expense], ignore_index=True)
-            # income_data.to_csv('MOCK_DATA.csv', index=False)
+            income_data.to_csv('income.csv', index=False)
+            income_data = pd.read_csv('income.csv')
 
             messagebox.showinfo("Success", "Data added successfully!")
 
@@ -259,6 +422,7 @@ def view_income():
     new_window = Toplevel(window)
     new_window.title('View Income')
     new_window.geometry('550x350')
+    new_window.resizable(False, False)
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
     start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
@@ -341,11 +505,7 @@ def view_income():
     Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
 
 
-def edit_income():
-    pass
-
-
-def delete_income():
+def edit_and_delete_income():
     pass
 
 
@@ -369,15 +529,13 @@ expenses_menu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label='Expenses', menu=expenses_menu)
 expenses_menu.add_command(label='Add Expense', command=add_expense)
 expenses_menu.add_command(label='View Expenses', command=view_expense)
-expenses_menu.add_command(label='Edit Expense', command=edit_expense)
-expenses_menu.add_command(label='Delete Expense', command=delete_expense)
+expenses_menu.add_command(label='Edit/Delete Expense', command=edit_and_delete_expense)
 
 income_menu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label='Income', menu=income_menu)
-income_menu.add_command(label='Add new Income', command=add_income)
+income_menu.add_command(label='Add Income', command=add_income)
 income_menu.add_command(label='View Income', command=view_income)
-income_menu.add_command(label='Edit Income', command=edit_income)
-income_menu.add_command(label='Delete Income', command=delete_income)
+income_menu.add_command(label='Edit/Delete Income', command=edit_and_delete_income)
 
 budget_menu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label='Budget', menu=budget_menu)
