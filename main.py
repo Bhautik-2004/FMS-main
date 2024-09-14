@@ -28,7 +28,7 @@ def add_expense():
 
     Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
     date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                           date_pattern='DD/MM/yyyy')
+                           date_pattern='dd/MM/yyyy')
     date_input.grid(row=1, column=1, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
@@ -88,12 +88,12 @@ def view_expense():
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
     start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                                 date_pattern='DD/MM/yyyy')
+                                 date_pattern='dd/MM/yyyy')
     start_date_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
     end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                               date_pattern='DD/MM/yyyy')
+                               date_pattern='dd/MM/yyyy')
     end_date_input.grid(row=0, column=3, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
@@ -170,18 +170,18 @@ def view_expense():
 
 def edit_and_delete_expense():
     new_window = Toplevel(window)
-    new_window.title('View Expenses')
+    new_window.title('Edit/Delete Expenses')
     new_window.geometry('550x400')
     new_window.resizable(False, False)
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
     start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                                 date_pattern='DD/MM/yyyy')
+                                 date_pattern='dd/MM/yyyy')
     start_date_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
     end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                               date_pattern='DD/MM/yyyy')
+                               date_pattern='dd/MM/yyyy')
     end_date_input.grid(row=0, column=3, padx=10, pady=5)
 
     category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
@@ -269,6 +269,7 @@ def edit_and_delete_expense():
 
             Label(edit_window, text=f'Expense ID: {expense_id}').grid(row=0, column=0, padx=10, pady=10, sticky='w')
 
+            # Retrieve current values
             current_date = expense_data.loc[expense_data['expense_id'] == expense_id, 'date'].values[0]
             current_amount = expense_data.loc[expense_data['expense_id'] == expense_id, 'amount'].values[0]
             current_category = expense_data.loc[expense_data['expense_id'] == expense_id, 'category'].values[0]
@@ -276,8 +277,8 @@ def edit_and_delete_expense():
 
             Label(edit_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5, sticky='w')
             date_input = DateEntry(edit_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                                   date_pattern='DD/MM/yyyy')
-            date_input.set_date(pd.to_datetime(current_date).date())  # Set initial date
+                                   date_pattern='dd/MM/yyyy')  # Correct date format
+            date_input.set_date(pd.to_datetime(current_date, dayfirst=True).date())  # Ensure day-first parsing
             date_input.grid(row=1, column=1, padx=10, pady=5)
 
             Label(edit_window, text='Amount: ').grid(row=2, column=0, padx=10, pady=5, sticky='w')
@@ -294,32 +295,37 @@ def edit_and_delete_expense():
 
             Label(edit_window, text='Payment Method: ').grid(row=4, column=0, padx=10, pady=5, sticky='w')
             payment_method_values = ['Debit Card', 'Credit Card', 'Mobile Payment', 'Cash']
-            payment_method_var_var = StringVar(value=current_payment_method)
-            payment_method_input = OptionMenu(edit_window, payment_method_var_var, *payment_method_values)
+            payment_method_var = StringVar(value=current_payment_method)
+            payment_method_input = OptionMenu(edit_window, payment_method_var, *payment_method_values)
             payment_method_input.grid(row=4, column=1, padx=10, pady=5)
 
             def update_expense():
                 global expense_data
-                new_date = date_input.get_date().strftime('%d-%m-%Y')  # Format date as needed
+                # Ensure correct format and day-first approach
+                new_date = date_input.get_date().strftime('%d-%m-%Y')  # Format date as day-month-year
                 new_amount = float(amount_input.get())  # Convert to float if necessary
                 new_category = category_var.get()
-                new_payment_method = payment_method_input.get()
+                new_payment_method = payment_method_var.get()
 
+                # Update DataFrame
                 expense_data.loc[expense_data['expense_id'] == expense_id, 'date'] = new_date
                 expense_data.loc[expense_data['expense_id'] == expense_id, 'amount'] = new_amount
                 expense_data.loc[expense_data['expense_id'] == expense_id, 'category'] = new_category
                 expense_data.loc[expense_data['expense_id'] == expense_id, 'payment_method'] = new_payment_method
 
+                # Update the displayed values in the Treeview
                 view_expense_table.item(selected_item,
                                         values=(expense_id, new_date, new_amount, new_category, new_payment_method))
 
+                # Save the updated data to CSV
                 expense_data.to_csv('MOCK_DATA.csv', index=False)
-                expense_data = pd.read_csv('MOCK_DATA.csv')
+                expense_data = pd.read_csv('MOCK_DATA.csv', dayfirst=True)  # Ensure day-first when reloading
 
+                # Close edit window and show success message
                 edit_window.destroy()
                 messagebox.showinfo("Success", f"Expense #{expense_id} updated successfully!")
 
-            Button(edit_window, text="Update", command=update_expense).grid(row=5, column=0, pady=5)
+            Button(edit_window, text="Update", command=update_expense).grid(row=5, column=0, columnspan=2, pady=10)
 
         else:
             messagebox.showerror("Error", "No entry selected to edit.")
@@ -368,7 +374,7 @@ def add_income():
 
     Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
     date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                           date_pattern='DD/MM/yyyy')
+                           date_pattern='dd/MM/yyyy')
     date_input.grid(row=1, column=1, padx=10, pady=5)
 
     Label(new_window, text='Amount: ').grid(row=2, column=0, padx=10, pady=5)
@@ -426,12 +432,12 @@ def view_income():
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
     start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                                 date_pattern='DD/MM/yyyy')
+                                 date_pattern='dd/MM/yyyy')
     start_date_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
     end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
-                               date_pattern='DD/MM/yyyy')
+                               date_pattern='dd/MM/yyyy')
     end_date_input.grid(row=0, column=3, padx=10, pady=5)
 
     category_values = ['Primary', 'Secondary', 'Passive']

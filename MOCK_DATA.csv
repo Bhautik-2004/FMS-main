@@ -25,11 +25,11 @@ expense_id,date,amount,category,payment_method
 24,2023-02-25,4551.21,Medical,Mobile Payment
 25,2022-01-03,5721.25,Groceries,Credit Card
 26,2022-09-11,3798.53,Medical,Mobile Payment
-27,2023-10-08,672.08,Transportation,Credit Card
+27,2023-08-10,672.08,Groceries,Debit Card
 28,2022-07-06,2439.51,Utilities,Cash
 29,2023-02-09,3628.08,Entertainment,Credit Card
 30,2022-10-20,4809.54,Transportation,Cash
-31,2023-12-26,408.65,Dine Out,Credit Card
+31,2023-12-26,408.65,Living Expenses,Debit Card
 32,2022-03-17,8292.22,Clothing,Cash
 33,2023-10-25,9666.82,Medical,Credit Card
 34,2023-09-02,7597.88,Medical,Credit Card
