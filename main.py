@@ -7,6 +7,16 @@ from tkcalendar import DateEntry
 expense_data = pd.read_csv('MOCK_DATA.csv')
 income_data = pd.read_csv('income.csv')
 
+# Validation to input only Numbers
+def validate_numeric_input(current_value):
+    # Allow if it's an empty string (for deletion), or a valid float
+    if current_value == "" or current_value == ".":
+        return True
+    try:
+        float(current_value)  # Try converting to float
+        return True
+    except ValueError:
+        return False
 
 # Function to add new data
 def add_expense():
@@ -23,7 +33,7 @@ def add_expense():
         default_id = 1
 
     Label(new_window, text='Expense ID: ').grid(row=0, column=0, padx=10, pady=5)
-    expense_id_input = Entry(new_window, textvariable=default_id)
+    expense_id_input = Entry(new_window, textvariable=default_id, state='disabled')
     expense_id_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
@@ -38,8 +48,9 @@ def add_expense():
     category_input = OptionMenu(new_window, category_var, *category_values)
     category_input.grid(row=2, column=1, padx=10, pady=5)
 
+    vcmd = (new_window.register(validate_numeric_input), '%P')
     Label(new_window, text='Amount: ').grid(row=3, column=0, padx=10, pady=5)
-    amount_input = Entry(new_window)
+    amount_input = Entry(new_window, validate="key", validatecommand=vcmd)
     amount_input.grid(row=3, column=1, padx=10, pady=5)
 
     payment_values = ['Debit Card', 'Credit Card', 'Mobile Payment', 'Cash']
@@ -83,7 +94,7 @@ def add_expense():
 def view_expense():
     new_window = Toplevel(window)
     new_window.title('View Expenses')
-    new_window.geometry('550x350')
+    new_window.geometry('550x380')
     new_window.resizable(False, False)
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
@@ -140,6 +151,8 @@ def view_expense():
     view_expense_table.heading("category", text="Category", anchor=CENTER)
     view_expense_table.heading("payment_method", text="Mode of Payment", anchor=CENTER)
 
+    no_data_label = Label(new_window, text='No Data Available', fg='red')
+    no_data_label.grid_forget()     # Hidden initially
     def submit():
 
         start_date = start_date_input.get_date()
@@ -160,8 +173,12 @@ def view_expense():
             view_expense_table.delete(row)
 
         # Insert filtered data into the Treeview
-        for _, row in filtered_data.iterrows():
-            view_expense_table.insert('', 'end', values=(int(row['expense_id']),
+        if filtered_data.empty:
+            no_data_label.grid(row=3, column=0, columnspan=4)
+        else:
+            no_data_label.grid_forget()
+            for _, row in filtered_data.iterrows():
+                view_expense_table.insert('', 'end', values=(int(row['expense_id']),
                                                          row['date'].strftime('%Y-%m-%d'), row['amount'],
                                                          row['category'], row['payment_method']))
 
@@ -171,7 +188,7 @@ def view_expense():
 def edit_and_delete_expense():
     new_window = Toplevel(window)
     new_window.title('Edit/Delete Expenses')
-    new_window.geometry('550x400')
+    new_window.geometry('550x410')
     new_window.resizable(False, False)
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
@@ -227,6 +244,9 @@ def edit_and_delete_expense():
     view_expense_table.heading("amount", text="Amount", anchor=CENTER)
     view_expense_table.heading("category", text="Category", anchor=CENTER)
     view_expense_table.heading("payment_method", text="Mode of Payment", anchor=CENTER)
+
+    no_data_label = Label(new_window, text='No Data Available', fg='red')
+    no_data_label.grid_forget()  # Hidden initially
 
     def submit():
         global expense_data
@@ -248,10 +268,14 @@ def edit_and_delete_expense():
             view_expense_table.delete(row)
 
         # Insert filtered data into the Treeview
-        for _, row in filtered_data.iterrows():
-            view_expense_table.insert('', 'end', values=(int(row['expense_id']),
-                                                         row['date'].strftime('%Y-%m-%d'), row['amount'],
-                                                         row['category'], row['payment_method']))
+        if filtered_data.empty:
+            no_data_label.grid(row=3, column=0, columnspan=4)
+        else:
+            no_data_label.grid_forget()
+            for _, row in filtered_data.iterrows():
+                view_expense_table.insert('', 'end', values=(int(row['expense_id']),
+                                                             row['date'].strftime('%Y-%m-%d'), row['amount'],
+                                                             row['category'], row['payment_method']))
 
     def edit_selected():
         global expense_data
@@ -353,8 +377,8 @@ def edit_and_delete_expense():
             messagebox.showerror("Error", "No entry selected to delete.")
 
     Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
-    Button(new_window, text="Edit Selected", command=edit_selected).grid(row=3, column=0, columnspan=3, pady=5)
-    Button(new_window, text="Delete Selected", command=delete_selected).grid(row=3, column=1, columnspan=4, pady=5)
+    Button(new_window, text="Edit Selected", command=edit_selected).grid(row=4, column=0, columnspan=3, pady=5)
+    Button(new_window, text="Delete Selected", command=delete_selected).grid(row=4, column=1, columnspan=4, pady=5)
 
 
 def add_income():

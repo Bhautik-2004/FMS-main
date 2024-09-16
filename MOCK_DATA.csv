@@ -6,7 +6,6 @@ expense_id,date,amount,category,payment_method
 5,2022-07-24,3086.98,Utilities,Debit Card
 6,2023-09-16,6917.71,Groceries,Mobile Payment
 7,2023-07-28,2551.31,Groceries,Debit Card
-8,2023-09-15,5114.03,Clothing,Credit Card
 9,2023-03-20,2864.37,Medical,Cash
 10,2022-03-07,7754.1,Medical,Cash
 11,2023-04-22,5477.59,Transportation,Debit Card
@@ -14,7 +13,7 @@ expense_id,date,amount,category,payment_method
 13,2022-09-20,247.79,Transportation,Debit Card
 14,2022-07-13,6845.79,Clothing,Mobile Payment
 15,2022-01-29,5896.81,Utilities,Cash
-16,2023-10-05,4945.45,Living Expenses,Debit Card
+16,2023-10-05,4945.45,Medical,Mobile Payment
 17,2023-01-01,9774.45,Clothing,Credit Card
 18,2023-02-22,7660.82,Living Expenses,Credit Card
 19,2022-09-02,6849.39,Living Expenses,Debit Card
@@ -207,7 +206,7 @@ expense_id,date,amount,category,payment_method
 206,2022-01-15,3721.46,Utilities,Mobile Payment
 207,2023-12-29,1744.85,Entertainment,Cash
 208,2022-07-12,1474.52,Dine Out,Debit Card
-209,2023-11-08,7242.78,Dine Out,Cash
+209,2023-11-08,7242.78,Medical,Debit Card
 210,2022-10-27,1475.35,Transportation,Debit Card
 211,2022-06-29,798.12,Charity,Cash
 212,2023-06-28,6977.45,Living Expenses,Cash
@@ -519,7 +518,7 @@ expense_id,date,amount,category,payment_method
 518,2022-07-13,5571.19,Entertainment,Cash
 519,2022-02-27,2928.7,Transportation,Credit Card
 520,2022-06-13,4005.34,Utilities,Debit Card
-521,2023-09-12,5219.51,Transportation,Mobile Payment
+521,2023-09-12,5219.51,Living Expenses,Credit Card
 522,2023-05-26,8059.93,Transportation,Cash
 523,2022-04-06,8355.87,Dine Out,Credit Card
 524,2022-01-28,5723.85,Charity,Debit Card
