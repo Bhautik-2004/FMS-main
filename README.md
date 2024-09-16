@@ -1,6 +1,6 @@
 Financial Management System 🪙
 
-- Required Pandas Libraries:
+- Required Libraries:
 pandas
 tkinter
 tkcalendar
