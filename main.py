@@ -3,6 +3,9 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
 from tkcalendar import DateEntry
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
 
 expense_data = pd.read_csv('MOCK_DATA.csv')
 income_data = pd.read_csv('income.csv')
@@ -673,7 +676,7 @@ def edit_and_delete_income():
 
             category_values = ['Primary', 'Secondary', 'Passive']
             category_var = StringVar(value=current_category)
-            Label(new_window, text='Category: ').grid(row=3, column=0, padx=10, pady=5)
+            Label(edit_window, text='Category: ').grid(row=3, column=0, padx=10, pady=5)
             category_input = OptionMenu(edit_window, category_var, *category_values)
             category_input.grid(row=3, column=1, padx=10, pady=5)
 
@@ -796,17 +799,16 @@ help_menu.add_command(label='FAQs')
 help_menu.add_separator()
 help_menu.add_command(label='About')
 
-text_widget = Text(window, height=20, width=40)
-text_widget.pack()
+# text_widget = Text(window, height=20, width=40)
+# text_widget.pack()
 
 # Categorize Expense
 expense_by_catg = expense_data.groupby('category')['amount'].sum()
-print(expense_by_catg)
-
-text_widget.insert(END, "Expenses by Category:\n")
-for category, amount in expense_by_catg.items():
-    text_widget.insert(END, f"{category}: ${amount:.2f}\n")
-
-text_widget.config(state=DISABLED)
-
+# print(expense_by_catg)
+#
+# text_widget.insert(END, "Expenses by Category:\n")
+# for category, amount in expense_by_catg.items():
+#     text_widget.insert(END, f"{category}: ${amount:.2f}\n")
+#
+# text_widget.config(state=DISABLED)
 window.mainloop()
