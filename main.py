@@ -7,16 +7,17 @@ from tkcalendar import DateEntry
 expense_data = pd.read_csv('MOCK_DATA.csv')
 income_data = pd.read_csv('income.csv')
 
+
 # Validation to input only Numbers
 def validate_numeric_input(current_value):
-    # Allow if it's an empty string (for deletion), or a valid float
     if current_value == "" or current_value == ".":
         return True
     try:
-        float(current_value)  # Try converting to float
+        float(current_value)
         return True
     except ValueError:
         return False
+
 
 # Function to add new data
 def add_expense():
@@ -152,9 +153,9 @@ def view_expense():
     view_expense_table.heading("payment_method", text="Mode of Payment", anchor=CENTER)
 
     no_data_label = Label(new_window, text='No Data Available', fg='red')
-    no_data_label.grid_forget()     # Hidden initially
-    def submit():
+    no_data_label.grid_forget()  # Hidden initially
 
+    def submit():
         start_date = start_date_input.get_date()
         end_date = end_date_input.get_date()
 
@@ -179,8 +180,8 @@ def view_expense():
             no_data_label.grid_forget()
             for _, row in filtered_data.iterrows():
                 view_expense_table.insert('', 'end', values=(int(row['expense_id']),
-                                                         row['date'].strftime('%Y-%m-%d'), row['amount'],
-                                                         row['category'], row['payment_method']))
+                                                             row['date'].strftime('%Y-%m-%d'), row['amount'],
+                                                             row['category'], row['payment_method']))
 
     Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
 
@@ -305,8 +306,9 @@ def edit_and_delete_expense():
             date_input.set_date(pd.to_datetime(current_date, dayfirst=True).date())  # Ensure day-first parsing
             date_input.grid(row=1, column=1, padx=10, pady=5)
 
+            vcmd = (new_window.register(validate_numeric_input), '%P')
             Label(edit_window, text='Amount: ').grid(row=2, column=0, padx=10, pady=5, sticky='w')
-            amount_input = Entry(edit_window)
+            amount_input = Entry(edit_window, validate='key', validatecommand=vcmd)
             amount_input.insert(0, current_amount)
             amount_input.grid(row=2, column=1, padx=10, pady=5)
 
@@ -389,11 +391,13 @@ def add_income():
     new_window.resizable(False, False)
 
     if not expense_data.empty:
-        default_id = IntVar(new_window, value=income_data['income_id'].tail(1).values[0]+1)
+        last_id = int(income_data['income_id'].tail(1).values[0])
+        default_id = IntVar(new_window, value=last_id + 1)
     else:
         default_id = 1
+
     Label(new_window, text='Income ID: ').grid(row=0, column=0, padx=10, pady=5)
-    income_id_input = Entry(new_window, textvariable=default_id)
+    income_id_input = Entry(new_window, textvariable=default_id, state="disabled")
     income_id_input.grid(row=0, column=1, padx=10, pady=5)
 
     Label(new_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5)
@@ -401,8 +405,9 @@ def add_income():
                            date_pattern='yyyy/MM/dd')
     date_input.grid(row=1, column=1, padx=10, pady=5)
 
+    vcmd = (new_window.register(validate_numeric_input), '%P')
     Label(new_window, text='Amount: ').grid(row=2, column=0, padx=10, pady=5)
-    amount_input = Entry(new_window)
+    amount_input = Entry(new_window, validate='key', validatecommand=vcmd)
     amount_input.grid(row=2, column=1, padx=10, pady=5)
 
     category_values = ['Primary', 'Secondary', 'Passive']
@@ -411,31 +416,31 @@ def add_income():
     category_input = OptionMenu(new_window, category_var, *category_values)
     category_input.grid(row=3, column=1, padx=10, pady=5)
 
-    method_values = ['Bank Transfer', 'Online']
-    method_var = StringVar(value='Select')
+    payment_method_values = ['Bank Transfer', 'Online']
+    payment_method_var = StringVar(value='Select')
     Label(new_window, text='Payment Method: ').grid(row=4, column=0, padx=10, pady=5)
-    method_input = OptionMenu(new_window, method_var, *method_values)
-    method_input.grid(row=4, column=1, padx=10, pady=5)
+    payment_method_input = OptionMenu(new_window, payment_method_var, *payment_method_values)
+    payment_method_input.grid(row=4, column=1, padx=10, pady=5)
 
     def submit():
         if (not income_id_input.get() or
                 category_var.get() == 'Select' or
                 not amount_input.get() or
-                method_var.get() == 'Select'):
+                payment_method_var.get() == 'Select'):
             messagebox.showerror("Error", "Please fill in all fields.")
             return
 
         try:
-            new_expense = pd.DataFrame({
-                "expense_id": [income_id_input.get()],
+            new_income = pd.DataFrame({
+                "income_id": [income_id_input.get()],
                 "date": [date_input.get_date()],
                 "amount": [float(amount_input.get()) if amount_input.get().replace('.', '', 1).isdigit() else 0.0],
                 "category": [category_var.get()],
-                "method": [method_var.get()],
+                "payment_method": [payment_method_var.get()],
             })
 
             global income_data
-            income_data = pd.concat([income_data, new_expense], ignore_index=True)
+            income_data = pd.concat([income_data, new_income], ignore_index=True)
             income_data.to_csv('income.csv', index=False)
             income_data = pd.read_csv('income.csv')
 
@@ -445,13 +450,14 @@ def add_income():
 
         except ValueError:
             messagebox.showerror("Error", "Invalid amount. Please enter a valid number.")
+
     Button(new_window, text="Submit", command=submit).grid(row=5, column=0, columnspan=2, pady=10)
 
 
 def view_income():
     new_window = Toplevel(window)
     new_window.title('View Income')
-    new_window.geometry('550x350')
+    new_window.geometry('550x380')
     new_window.resizable(False, False)
 
     Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
@@ -481,19 +487,19 @@ def view_income():
     view_income_x_scroll = Scrollbar(view_income_frame, orient='horizontal')
     view_income_x_scroll.grid(row=2, column=0, sticky='ew')
 
-    # Treeview to display expenses
+    # Treeview to display income
     view_income_table = ttk.Treeview(view_income_frame, yscrollcommand=view_income_y_scroll.set,
-                                      xscrollcommand=view_income_x_scroll.set)
+                                     xscrollcommand=view_income_x_scroll.set)
     view_income_table.grid(row=0, column=0)
 
     # Configure Scrollbars
     view_income_y_scroll.config(command=view_income_table.yview)
     view_income_x_scroll.config(command=view_income_table.xview)
 
-    view_income_table['columns'] = ('expense_id', 'date', 'amount', 'category', 'payment_method')
+    view_income_table['columns'] = ('income_id', 'date', 'amount', 'category', 'payment_method')
     # format our column
     view_income_table.column("#0", width=0, stretch=NO)
-    view_income_table.column("expense_id", anchor=CENTER, width=80)
+    view_income_table.column("income_id", anchor=CENTER, width=80)
     view_income_table.column("date", anchor=CENTER, width=80)
     view_income_table.column("amount", anchor=CENTER, width=80)
     view_income_table.column("category", anchor=CENTER, width=90)
@@ -501,14 +507,16 @@ def view_income():
 
     # Create Headings
     view_income_table.heading("#0", text="", anchor=CENTER)
-    view_income_table.heading("expense_id", text="ID", anchor=CENTER)
+    view_income_table.heading("income_id", text="ID", anchor=CENTER)
     view_income_table.heading("date", text="Date", anchor=CENTER)
     view_income_table.heading("amount", text="Amount", anchor=CENTER)
     view_income_table.heading("category", text="Category", anchor=CENTER)
     view_income_table.heading("payment_method", text="Mode of Payment", anchor=CENTER)
 
+    no_data_label = Label(new_window, text='No Data Available', fg='red')
+    no_data_label.grid_forget()  # Hidden initially
+
     def submit():
-        global income_data
         start_date = start_date_input.get_date()
         end_date = end_date_input.get_date()
 
@@ -517,7 +525,7 @@ def view_income():
         income_data['date'] = pd.to_datetime(income_data['date'])
 
         filtered_data = income_data[(income_data['date'] >= pd.to_datetime(start_date)) &
-                                     (income_data['date'] <= pd.to_datetime(end_date))]
+                                    (income_data['date'] <= pd.to_datetime(end_date))]
 
         if selected_category != 'All':
             filtered_data = filtered_data[filtered_data['category'] == selected_category]
@@ -527,16 +535,210 @@ def view_income():
             view_income_table.delete(row)
 
         # Insert filtered data into the Treeview
-        for _, row in filtered_data.iterrows():
-            view_income_table.insert('', 'end', values=(
-                int(row['income_id']), row['date'].strftime('%Y-%m-%d'), row['amount'], row['category'],
-                row['method']))
+        if filtered_data.empty:
+            no_data_label.grid(row=3, column=0, columnspan=4)
+        else:
+            for _, row in filtered_data.iterrows():
+                view_income_table.insert('', 'end', values=(int(row['income_id']),
+                                                            row['date'].strftime('%Y-%m-%d'), row['amount'],
+                                                            row['category'],row['payment_method']))
 
     Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
 
 
 def edit_and_delete_income():
-    pass
+    new_window = Toplevel(window)
+    new_window.title('Edit/Delete Expenses')
+    new_window.geometry('550x410')
+    new_window.resizable(False, False)
+
+    Label(new_window, text='Start Date: ').grid(row=0, column=0, padx=10, pady=5)
+    start_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                                 date_pattern='yyyy/MM/dd')
+    start_date_input.grid(row=0, column=1, padx=10, pady=5)
+
+    Label(new_window, text='End Date: ').grid(row=0, column=2, padx=10, pady=5)
+    end_date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                               date_pattern='yyyy/MM/dd')
+    end_date_input.grid(row=0, column=3, padx=10, pady=5)
+
+    category_values = ['Primary', 'Secondary', 'Passive']
+    category_var = StringVar(value='All')
+    Label(new_window, text='Category: ').grid(row=1, column=0, padx=10, pady=5)
+    category_input = OptionMenu(new_window, category_var, *category_values)
+    category_input.grid(row=1, column=1, padx=10, pady=5)
+
+    # Frame for Treeview and Scrollbars
+    view_income_frame = Frame(new_window)
+    view_income_frame.grid(row=2, column=0, columnspan=4, padx=10, pady=10)
+
+    # Scrollbars
+    view_income_y_scroll = Scrollbar(view_income_frame, orient='vertical')
+    view_income_y_scroll.grid(row=0, column=1, sticky='ns')
+
+    view_income_x_scroll = Scrollbar(view_income_frame, orient='horizontal')
+    view_income_x_scroll.grid(row=2, column=0, sticky='ew')
+
+    # Treeview to display income
+    view_income_table = ttk.Treeview(view_income_frame, yscrollcommand=view_income_y_scroll.set,
+                                     xscrollcommand=view_income_x_scroll.set)
+    view_income_table.grid(row=0, column=0)
+
+    # Configure Scrollbars
+    view_income_y_scroll.config(command=view_income_table.yview)
+    view_income_x_scroll.config(command=view_income_table.xview)
+
+    view_income_table['columns'] = ('income_id', 'date', 'amount', 'category', 'payment_method')
+    # format our column
+    view_income_table.column("#0", width=0, stretch=NO)
+    view_income_table.column("income_id", anchor=CENTER, width=80)
+    view_income_table.column("date", anchor=CENTER, width=80)
+    view_income_table.column("amount", anchor=CENTER, width=80)
+    view_income_table.column("category", anchor=CENTER, width=90)
+    view_income_table.column("payment_method", anchor=CENTER, width=150)
+
+    # Create Headings
+    view_income_table.heading("#0", text="", anchor=CENTER)
+    view_income_table.heading("income_id", text="ID", anchor=CENTER)
+    view_income_table.heading("date", text="Date", anchor=CENTER)
+    view_income_table.heading("amount", text="Amount", anchor=CENTER)
+    view_income_table.heading("category", text="Category", anchor=CENTER)
+    view_income_table.heading("payment_method", text="Mode of Payment", anchor=CENTER)
+
+    no_data_label = Label(new_window, text='No Data Available', fg='red')
+    no_data_label.grid_forget()  # Hidden initially
+
+    def submit():
+        start_date = start_date_input.get_date()
+        end_date = end_date_input.get_date()
+
+        selected_category = category_var.get()
+
+        income_data['date'] = pd.to_datetime(income_data['date'])
+
+        filtered_data = income_data[(income_data['date'] >= pd.to_datetime(start_date)) &
+                                    (income_data['date'] <= pd.to_datetime(end_date))]
+
+        if selected_category != 'All':
+            filtered_data = filtered_data[filtered_data['category'] == selected_category]
+
+        # Clear the Treeview
+        for row in view_income_table.get_children():
+            view_income_table.delete(row)
+
+        # Insert filtered data into the Treeview
+        if filtered_data.empty:
+            no_data_label.grid(row=3, column=0, columnspan=4)
+        else:
+            for _, row in filtered_data.iterrows():
+                view_income_table.insert('', 'end', values=(int(row['income_id']),
+                                                            row['date'].strftime('%Y-%m-%d'), row['amount'],
+                                                            row['category'], row['payment_method']))
+
+    Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
+
+    def edit_selected():
+        global income_data
+        selected_item = view_income_table.selection()  # Get selected row
+
+        if selected_item:
+            item_values = view_income_table.item(selected_item, 'values')
+
+            # Extract the first value (income_id) from the tuple
+            income_id = int(item_values[0])
+            edit_window = Toplevel(window)
+            edit_window.title(f'Edit Expense #{income_id}')
+            edit_window.geometry('300x250')
+            edit_window.resizable(False, False)
+
+            Label(edit_window, text=f'Expense ID: {income_id}').grid(row=0, column=0, padx=10, pady=10, sticky='w')
+
+            # Retrieve current values
+            current_amount = income_data.loc[income_data['income_id'] == income_id, 'amount'].values[0]
+            current_date = income_data.loc[income_data['income_id'] == income_id, 'date'].values[0]
+            current_category = income_data.loc[income_data['income_id'] == income_id, 'category'].values[0]
+            current_payment_method = income_data.loc[income_data['income_id'] == income_id, 'payment_method'].values[0]
+
+            Label(edit_window, text='Date: ').grid(row=1, column=0, padx=10, pady=5, sticky='w')
+            date_input = DateEntry(edit_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                                   date_pattern='yyyy/MM/dd')  # Correct date format
+            date_input.set_date(pd.to_datetime(current_date, dayfirst=True).date())  # Ensure day-first parsing
+            date_input.grid(row=1, column=1, padx=10, pady=5)
+
+            vcmd = (edit_window.register(validate_numeric_input), '%P')
+            Label(edit_window, text='Amount: ').grid(row=2, column=0, padx=10, pady=5, sticky='w')
+            amount_input = Entry(edit_window, validate='key', validatecommand=vcmd)
+            amount_input.insert(0, current_amount)
+            amount_input.grid(row=2, column=1, padx=10, pady=5)
+
+            category_values = ['Primary', 'Secondary', 'Passive']
+            category_var = StringVar(value=current_category)
+            Label(new_window, text='Category: ').grid(row=3, column=0, padx=10, pady=5)
+            category_input = OptionMenu(edit_window, category_var, *category_values)
+            category_input.grid(row=3, column=1, padx=10, pady=5)
+
+            Label(edit_window, text='Payment Method: ').grid(row=4, column=0, padx=10, pady=5, sticky='w')
+            payment_method_values = ['Bank Transfer', 'Online']
+            payment_method_var = StringVar(value=current_payment_method)
+            payment_method_input = OptionMenu(edit_window, payment_method_var, *payment_method_values)
+            payment_method_input.grid(row=4, column=1, padx=10, pady=5)
+
+            def update_income():
+                global income_data
+                # Ensure correct format and day-first approach
+                new_date = date_input.get_date().strftime('%Y-%m-%d')  # Format date as day-month-year
+                new_amount = float(amount_input.get())  # Convert to float if necessary
+                new_category = category_var.get()
+                new_payment_method = payment_method_var.get()
+
+                # Update DataFrame
+                income_data.loc[income_data['income_id'] == income_id, 'date'] = new_date
+                income_data.loc[income_data['income_id'] == income_id, 'amount'] = new_amount
+                income_data.loc[income_data['income_id'] == income_id, 'category'] = new_category
+                income_data.loc[income_data['income_id'] == income_id, 'payment_method'] = new_payment_method
+
+                # Update the displayed values in the Treeview
+                view_income_table.item(selected_item,
+                                        values=(income_id, new_date, new_amount, new_category, new_payment_method))
+
+                # Save the updated data to CSV
+                income_data.to_csv('income.csv', index=False)
+                income_data = pd.read_csv('income.csv', dayfirst=True)  # Ensure day-first when reloading
+
+                # Close edit window and show success message
+                edit_window.destroy()
+                messagebox.showinfo("Success", f"Expense #{income_id} updated successfully!")
+
+            Button(edit_window, text="Update", command=update_income).grid(row=5, column=0, columnspan=2, pady=10)
+
+        else:
+            messagebox.showerror("Error", "No entry selected to edit.")
+
+    def delete_selected():
+        global income_data
+
+        selected_item = view_income_table.selection()
+
+        if selected_item:
+            item_values = view_income_table.item(selected_item, 'values')
+
+            income_id = int(item_values[0])
+
+            confirm = messagebox.askyesno("Confirm Delete", "Are you sure you want to delete this entry?")
+            if confirm:
+                view_income_table.delete(selected_item)
+
+                income_data = income_data[income_data['income_id'] != income_id]
+
+                income_data.to_csv('income.csv', index=False)
+            else:
+                messagebox.showerror("Error", "No entry selected to delete.")
+        else:
+            messagebox.showerror("Error", "No entry selected to delete.")
+
+    Button(new_window, text="Submit", command=submit).grid(row=1, column=3, columnspan=2, pady=10)
+    Button(new_window, text="Edit Selected", command=edit_selected).grid(row=4, column=0, columnspan=3, pady=5)
+    Button(new_window, text="Delete Selected", command=delete_selected).grid(row=4, column=1, columnspan=4, pady=5)
 
 
 # Main Tkinter window
