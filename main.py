@@ -26,7 +26,7 @@ def validate_numeric_input(current_value):
 def add_expense():
     global expense_data
     new_window = Toplevel(window)
-    new_window.title("Add New Expense")
+    new_window.title("Add Expense")
     new_window.geometry("300x250")
     new_window.resizable(False, False)
 
@@ -743,6 +743,78 @@ def edit_and_delete_income():
     Button(new_window, text="Edit Selected", command=edit_selected).grid(row=4, column=0, columnspan=3, pady=5)
     Button(new_window, text="Delete Selected", command=delete_selected).grid(row=4, column=1, columnspan=4, pady=5)
 
+def recent_transactions():
+    global expense_data, income_data
+
+    new_window = Toplevel(window)
+    new_window.title('Edit/Delete Expenses')
+    new_window.geometry('520x280')
+    new_window.resizable(False, False)
+
+    # Frame for Treeview and Scrollbars
+    view_income_frame = Frame(new_window)
+    view_income_frame.grid(row=2, column=0, columnspan=4, padx=10, pady=10)
+
+    # Scrollbars
+    view_income_y_scroll = Scrollbar(view_income_frame, orient='vertical')
+    view_income_y_scroll.grid(row=0, column=1, sticky='ns')
+
+    view_income_x_scroll = Scrollbar(view_income_frame, orient='horizontal')
+    view_income_x_scroll.grid(row=2, column=0, sticky='ew')
+
+    # Treeview to display income
+    view_income_table = ttk.Treeview(view_income_frame, yscrollcommand=view_income_y_scroll.set,
+                                     xscrollcommand=view_income_x_scroll.set)
+    view_income_table.grid(row=0, column=0)
+
+    # Configure Scrollbars
+    view_income_y_scroll.config(command=view_income_table.yview)
+    view_income_x_scroll.config(command=view_income_table.xview)
+
+    view_income_table['columns'] = ('type', 'date', 'amount', 'category', 'payment_method')
+    # format our column
+    view_income_table.column("#0", width=0, stretch=NO)
+    view_income_table.column("type", anchor=CENTER, width=80)
+    view_income_table.column("date", anchor=CENTER, width=80)
+    view_income_table.column("amount", anchor=CENTER, width=80)
+    view_income_table.column("category", anchor=CENTER, width=90)
+    view_income_table.column("payment_method", anchor=CENTER, width=150)
+
+    # Create Headings
+    view_income_table.heading("#0", text="", anchor=CENTER)
+    view_income_table.heading("type", text="Type", anchor=CENTER)
+    view_income_table.heading("date", text="Date", anchor=CENTER)
+    view_income_table.heading("amount", text="Amount", anchor=CENTER)
+    view_income_table.heading("category", text="Category", anchor=CENTER)
+    view_income_table.heading("payment_method", text="Mode of Payment", anchor=CENTER)
+
+    no_data_label = Label(new_window, text='No Data Available', fg='red')
+    no_data_label.grid_forget()  # Hidden initially
+
+    # Load and process data
+    income_data = pd.read_csv('income.csv')
+    expense_data = pd.read_csv('MOCK_DATA.csv')
+
+    # Add a 'Type' column dynamically
+    income_data['type'] = 'Income'
+    expense_data['type'] = 'Expense'
+
+    recent_df = pd.concat([income_data.tail(), expense_data.tail()])
+    recent_df['date'] = pd.to_datetime(recent_df['date'])
+    recent_df = recent_df.sort_values(by='date', ascending=False)
+
+    for row in view_income_table.get_children():
+            view_income_table.delete(row)
+
+    # Insert filtered data into the Treeview
+    if recent_df.empty:
+        no_data_label.grid(row=3, column=0, columnspan=4)
+    else:
+        for _, row in recent_df.iterrows():
+            view_income_table.insert('', 'end', values=(row['type'],
+                                                        row['date'].strftime('%Y-%m-%d'), row['amount'],
+                                                        row['category'], row['payment_method']))
+
 
 # Main Tkinter window
 window = Tk()
@@ -756,7 +828,7 @@ window.config(menu=menubar)
 dashboard_menu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label='Dashboard', menu=dashboard_menu)
 dashboard_menu.add_command(label='Summary Overview')
-dashboard_menu.add_command(label='Recent Transactions')
+dashboard_menu.add_command(label='Recent Transactions', command=recent_transactions)
 dashboard_menu.add_separator()
 dashboard_menu.add_command(label='Exit', command=window.quit)
 
