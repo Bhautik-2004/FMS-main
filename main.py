@@ -1,3 +1,4 @@
+import datetime
 import pandas as pd
 from tkinter import *
 from tkinter import messagebox
@@ -9,7 +10,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 expense_data = pd.read_csv('MOCK_DATA.csv')
 income_data = pd.read_csv('income.csv')
-
+budget_data = pd.read_csv('budget.csv')
 
 # Validation to input only Numbers
 def validate_numeric_input(current_value):
@@ -30,11 +31,11 @@ def add_expense():
     new_window.geometry("300x250")
     new_window.resizable(False, False)
 
-    if not expense_data.empty:
+    if not expense_data.empty and not expense_data['expense_id'].isna().all():
         last_id = int(expense_data['expense_id'].tail(1).values[0])
         default_id = IntVar(new_window, value=last_id + 1)
     else:
-        default_id = 1
+        default_id = IntVar(new_window, value=1)
 
     Label(new_window, text='Expense ID: ').grid(row=0, column=0, padx=10, pady=5)
     expense_id_input = Entry(new_window, textvariable=default_id, state='disabled')
@@ -73,7 +74,7 @@ def add_expense():
 
         try:
             new_expense = pd.DataFrame({
-                "expense_id": [expense_id_input.get()],
+                "expense_id": [default_id.get()],
                 "date": [date_input.get_date()],
                 "amount": [float(amount_input.get()) if amount_input.get().replace('.', '', 1).isdigit() else 0.0],
                 "category": [category_var.get()],
@@ -393,11 +394,11 @@ def add_income():
     new_window.geometry('300x250')
     new_window.resizable(False, False)
 
-    if not expense_data.empty:
+    if not income_data.empty and not income_data['income_id'].isna().all():
         last_id = int(income_data['income_id'].tail(1).values[0])
         default_id = IntVar(new_window, value=last_id + 1)
     else:
-        default_id = 1
+        default_id = IntVar(new_window, value=1)
 
     Label(new_window, text='Income ID: ').grid(row=0, column=0, padx=10, pady=5)
     income_id_input = Entry(new_window, textvariable=default_id, state="disabled")
@@ -435,7 +436,7 @@ def add_income():
 
         try:
             new_income = pd.DataFrame({
-                "income_id": [income_id_input.get()],
+                "income_id": [default_id.get()],
                 "date": [date_input.get_date()],
                 "amount": [float(amount_input.get()) if amount_input.get().replace('.', '', 1).isdigit() else 0.0],
                 "category": [category_var.get()],
@@ -747,7 +748,7 @@ def recent_transactions():
     global expense_data, income_data
 
     new_window = Toplevel(window)
-    new_window.title('Edit/Delete Expenses')
+    new_window.title('Recent Transactions')
     new_window.geometry('520x280')
     new_window.resizable(False, False)
 
@@ -816,6 +817,107 @@ def recent_transactions():
                                                         row['category'], row['payment_method']))
 
 
+def add_budget():
+    global budget_data
+    new_window = Toplevel(window)
+    new_window.title("Add Budget")
+    new_window.geometry("300x300")
+    new_window.resizable(False, False)
+
+    if not budget_data.empty and not budget_data['budget_id'].isna().all():
+        last_id = int(budget_data['budget_id'].tail(1).values[0])
+        default_id = IntVar(new_window, value=last_id + 1)
+    else:
+        default_id = IntVar(new_window, value=1)
+
+    Label(new_window, text='Budget ID: ').grid(row=0, column=0, padx=10, pady=5)
+    budget_id_input = Entry(new_window, textvariable=default_id, state='disabled')
+    budget_id_input.grid(row=0, column=1, padx=10, pady=5)
+
+    category_values = ['Groceries', 'Utilities', 'Transportation', 'Entertainment', 'Clothing', 'Medical',
+                       'Living Expenses', 'Dine Out', 'Charity']
+    category_var = StringVar(value='Select')
+    Label(new_window, text='Category: ').grid(row=1, column=0, padx=10, pady=5)
+    category_input = OptionMenu(new_window, category_var, *category_values)
+    category_input.grid(row=1, column=1, padx=10, pady=5)
+
+    Label(new_window, text='Date: ').grid(row=2, column=0, padx=10, pady=5)
+    date_input = DateEntry(new_window, width=12, background='darkblue', foreground='white', borderwidth=2,
+                           date_pattern='yyyy/MM/dd', state='normal')
+    today = datetime.datetime.now().date()
+    date_input.set_date(today)
+    date_input.config(state='disabled')
+    date_input.grid(row=2, column=1, padx=10, pady=5)
+
+    month_names = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"]
+    month_var = StringVar(value='Select')
+    Label(new_window, text='Month: ').grid(row=3, column=0, padx=10, pady=5)
+    category_input = OptionMenu(new_window, month_var, *month_names)
+    category_input.grid(row=3, column=1, padx=10, pady=5)
+
+    year_input = IntVar(new_window, value=int(datetime.datetime.today().year))
+    Label(new_window, text='Year: ').grid(row=4, column=0, padx=10, pady=5)
+    budget_year_input = Entry(new_window, textvariable=year_input, state='disabled')
+    budget_year_input.grid(row=4, column=1, padx=10, pady=5)
+
+    vcmd = (new_window.register(validate_numeric_input), '%P')
+    Label(new_window, text='Amount: ').grid(row=5, column=0, padx=10, pady=5)
+    amount_input = Entry(new_window, validate="key", validatecommand=vcmd)
+    amount_input.grid(row=5, column=1, padx=10, pady=5)
+
+    payment_values = ['Debit Card', 'Credit Card', 'Mobile Payment', 'Cash']
+    payment_var = StringVar(value='Select')
+    Label(new_window, text='Payment Method: ').grid(row=6, column=0, padx=10, pady=5)
+    payment_method_input = OptionMenu(new_window, payment_var, *payment_values)
+    payment_method_input.grid(row=6, column=1, padx=10, pady=5)
+
+    def submit_data():
+        global budget_data
+        category = category_var.get()
+        month = month_var.get()
+        year = year_input.get()
+
+        # Check if an entry for the same category and month already exists
+        if not budget_data.empty:
+            duplicate_entry = budget_data[
+                (budget_data['category'] == category) &
+                (budget_data['month'] == month) &
+                (budget_data['year'] == year)
+            ]
+            if not duplicate_entry.empty:
+                messagebox.showerror("Error", f"Data for {category} for {month} {year} already exists.")
+                return
+
+        # Validate if all fields are filled
+        if category == 'Select' or month == 'Select' or not amount_input.get() or payment_var.get() == 'Select':
+            messagebox.showerror("Error", "Please fill in all fields.")
+            return
+
+        try:
+            new_budget = pd.DataFrame({
+                "budget_id": [default_id.get()],  # Access the IntVar directly
+                "category": [category],
+                "date": [date_input.get_date().strftime('%Y-%m-%d')],  # Convert to string
+                "month": [month],
+                "year": [year],  # Access the IntVar directly
+                "amount": [float(amount_input.get()) if amount_input.get().replace('.', '', 1).isdigit() else 0.0],
+                "payment_method": [payment_var.get()],
+            })
+
+            budget_data = pd.concat([budget_data, new_budget], ignore_index=True)
+            budget_data.to_csv('budget.csv', index=False)
+            budget_data = pd.read_csv('budget.csv')
+
+            messagebox.showinfo("Success", "Data added successfully!")
+            new_window.destroy()
+
+        except ValueError:
+            messagebox.showerror("Error", "Invalid amount. Please enter a valid number.")
+
+    Button(new_window, text="Submit", command=submit_data).grid(row=7, columnspan=2, pady=10)
+
+
 # Main Tkinter window
 window = Tk()
 window.title('FMS')
@@ -846,7 +948,7 @@ income_menu.add_command(label='Edit/Delete Income', command=edit_and_delete_inco
 
 budget_menu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label='Budget', menu=budget_menu)
-budget_menu.add_command(label='Set Budget')
+budget_menu.add_command(label='Set Budget', command=add_budget)
 budget_menu.add_command(label='View Budget')
 budget_menu.add_command(label='Edit Budget')
 budget_menu.add_command(label='Delete Budget')

@@ -998,3 +998,5 @@ expense_id,date,amount,category,payment_method
 998,2022-04-18,6407.17,Entertainment,Cash
 999,2022-02-28,6565.37,Living Expenses,Cash
 1000,2022-02-10,4487.17,Utilities,Cash
+1001,2024-09-20,100.0,Utilities,Debit Card
+1002,2024-09-20,1000.0,Groceries,Mobile Payment
