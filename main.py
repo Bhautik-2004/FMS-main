@@ -878,6 +878,17 @@ def add_budget():
         month = month_var.get()
         year = year_input.get()
 
+        today = datetime.datetime.now()
+        current_month = today.month
+        current_year = today.year
+
+        month_number = month_names.index(month) + 1 if month in month_names else 0
+
+        # Check if the selected month and year are valid
+        if year < current_year or (year == current_year and month_number < current_month):
+            messagebox.showerror("Error", "You can only add budgets for the current month and future months.")
+            return
+
         # Check if an entry for the same category and month already exists
         if not budget_data.empty:
             duplicate_entry = budget_data[
